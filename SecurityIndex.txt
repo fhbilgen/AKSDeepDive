@@ -1,0 +1,140 @@
+AKS Security
+=====================
+Security Concepts
+Security vulnerability management
+Security Baseline
+Confidential containers security policy
+Security controls by Azure Policy
+
+
+Container Security
+-------------------
+- Defender for containers overview
+- Enable Defender for Containers
+  https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-containers-deployment-overview 
++ DEMO: Deploy Defender for Containers deployment overview
+  - Azure AKS
+    - Overview
+    - Enable via Portal
+    - Enable programmatically
+    - Verify deployment
+    - Configure
+    - Remove
+  - AWS (EKS)
+  - GCP (GKE)
+  - Arc-enabled Kubernetes
+  Configure sensor deployed with Helm
+ 
+- Confidential Containers overview
++ DEMO: Deploy Confidential Containers with default policy 
+
+
+Image Security
+------------------
+- Container image management best practices
++ DEMO & SUBJECT: Validate signed images with Image Integrity
++ DEMO & SUBJECT: Remove vulnerable images with ImageCleaner
+- Scan Images in your CI/CD Workflow
+- Scan images in ACR registries
+
+
+Cluster Security
+-------------------
+- Cluster Security best practices
++ DEMO & SUBJECT: Azure kubelogin
+- Managed Identities
+  - Overview
+  + DEMO & SUBJECT: Enable a managed identity on your cluster
++ DEMO & SUBJECT: Create a service principal
+- Enable access to AKS clusters using Trusted Access
+- Limit access to cluster configuration file
+- Define API server authorized IP ranges
+- Manage cluster certificates and rotation
+- Use custom certificate authorities
+- Use Azure Policy
+- Control deployments with Azure Policy
+- Enforce best practices with deployment safeguards
++ DEMO & SUBJECT: Create an OIDC Issuer for your cluster
+
+- KMS etcd encryption
+  - Overview of KMS etcd encryption
+  - Use KMS etcd encryption (legacy)
+  - Update key vault mode
+  - Migrate to KMS v2
+  - Observability for KMS etcd encryption
+  - Migrate to KMS with platform-managed or customer-managed keys
+
+- Secure container access to resources
+
+
+Node security
+------------------
++ DEMO & SUBJECT: BYOK for Azure managed disks 
++ DEMO & SUBJECT: Enable host-based encryption
++ DEMO & SUBJECT: Enable FIPS
++ DEMO & SUBJECT: Use Confidential Virtual Machines
++ DEMO & SUBJECT: Use Dedicated Hosts with AKS
++ DEMO & SUBJECT: Restrict access to IMDS
+
+
+Authentication and Authorization
+---------------------------------
+- Access and identity concepts
+- Authentication and authorization best practices
+- Use managed identities
+- Create service principal
+- Enable Microsoft Entra Integration
+  - AKS-managed Microsoft Entra ID
+    - Enable AKS-managed Microsoft Entra integration 
+    - Manage local accounts
+    - Cluster and node access control with Conditional Access
+    - Cluster and node access control with Privileged Identity Management
+  - Microsoft Entra integration
+  - Enable GMSA integration
+- Use Azure RBAC for Kubernetes authorization
+- Use Kubernetes RBAC with Microsoft Entra Integration
+- Update cluster credentials
+- Limit access to cluster credentials
+- Limit access to cluster configuration file
+- External identity providers 
+  - External identity provider authentication overview
+  - Configure external identity providers
+Control deployments with Azure Policy
+
+
+
+Application Security
+-----------------------
+- Create an OIDC issuer for your cluster
+- Workload Identity
+  - Workload identity overview
+  - Deploy and configure workload identity for a cluster
+  - Configure cross-tenant workload identity
+  - Migrate your app from pod identity to workload identity
+  - Identity bindings overview
+  - Set up identity bindings
+- Microsoft Entra pod identity
+- Pod Sandboxing
+  - Pod Sandboxing overview
+  - Pod Sandboxing considerations
+  - Deploy Pod Sandboxing
+- Network policies
+  - Secure pod traffic with network policies
+  - Network policy best practices
+  - Use network policies in the Azure portal
+- Pod security policies
+- Pod Security Admission
+- Pod security best practices
+- Resource management best practices
+- Secrets Store CSI driver
+  - Configure TLS for NGINX Ingress Controller
+  - Azure Key Vault provider with Secrets Store CSI Driver
+    1 - Configure Secrets Store CSI Driver
+    2 - Provider Azure Key Vault Access
+    3 - Apply extra configurations or perform troubleshooting
+- Security bulletins
+
+
+Compliance
+-----------------------
+OVERVIEW
