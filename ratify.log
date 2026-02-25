@@ -1,0 +1,950 @@
+time="2026-02-20T12:40:24Z" level=info msg="Feature flag CERT_ROTATION is enabled"
+time="2026-02-20T12:40:24Z" level=info msg="Feature flag EXPERIMENTAL_HIGH_AVAILABILITY is disabled"
+time="2026-02-20T12:40:24Z" level=info msg="Setting log level to info"
+time=2026-02-20T12:40:24.470775468Z level=info msg=starting crd manager
+time=2026-02-20T12:40:24.470801237Z level=info msg=initializing executor with config file at default config path
+time=2026-02-20T12:40:24.470919834Z level=info msg=starting server at: :6001
+time=2026-02-20T12:40:24.471117249Z level=info msg=[controller-runtime.metrics] Metrics server is starting to listen addr=:8080 name=controller-runtime.metrics
+time=2026-02-20T12:40:24.471164207Z level=info msg=setting up cert rotation name=setup
+time=2026-02-20T12:40:24.471258548Z level=info msg=starting manager name=setup
+time=2026-02-20T12:40:24.471473523Z level=info msg=Starting server addr=[::]:9099 kind=health probe
+time=2026-02-20T12:40:24.471537934Z level=info msg=[cert-rotation] starting cert rotator controller name=cert-rotation
+time=2026-02-20T12:40:24.471554263Z level=info msg=starting server addr=[::]:8080 kind=metrics path=/metrics
+time=2026-02-20T12:40:24.471597898Z level=info msg=Starting EventSource controller=cert-rotator source=kind source: *v1.Secret
+time=2026-02-20T12:40:24.471630132Z level=info msg=Starting EventSource controller=cert-rotator source=kind source: *unstructured.Unstructured
+time=2026-02-20T12:40:24.471690625Z level=info msg=Starting EventSource controller=cert-rotator source=kind source: *unstructured.Unstructured
+time=2026-02-20T12:40:24.471701559Z level=info msg=Starting Controller controller=cert-rotator
+time=2026-02-20T12:40:24.471723169Z level=info msg=Starting EventSource controller=verifier controllerGroup=config.ratify.deislabs.io controllerKind=Verifier source=kind source: *v1beta1.Verifier
+time=2026-02-20T12:40:24.471768994Z level=info msg=Starting Controller controller=verifier controllerGroup=config.ratify.deislabs.io controllerKind=Verifier
+time=2026-02-20T12:40:24.471800484Z level=info msg=Starting EventSource controller=namespacedverifier controllerGroup=config.ratify.deislabs.io controllerKind=NamespacedVerifier source=kind source: *v1beta1.NamespacedVerifier
+time=2026-02-20T12:40:24.471819718Z level=info msg=Starting Controller controller=namespacedverifier controllerGroup=config.ratify.deislabs.io controllerKind=NamespacedVerifier
+time=2026-02-20T12:40:24.471889556Z level=info msg=Starting EventSource controller=store controllerGroup=config.ratify.deislabs.io controllerKind=Store source=kind source: *v1beta1.Store
+time=2026-02-20T12:40:24.471909811Z level=info msg=Starting Controller controller=store controllerGroup=config.ratify.deislabs.io controllerKind=Store
+time=2026-02-20T12:40:24.471951378Z level=info msg=Starting EventSource controller=namespacedpolicy controllerGroup=config.ratify.deislabs.io controllerKind=NamespacedPolicy source=kind source: *v1beta1.NamespacedPolicy
+time=2026-02-20T12:40:24.471968751Z level=info msg=Starting Controller controller=namespacedpolicy controllerGroup=config.ratify.deislabs.io controllerKind=NamespacedPolicy
+time=2026-02-20T12:40:24.472045674Z level=info msg=Starting EventSource controller=certificatestore controllerGroup=config.ratify.deislabs.io controllerKind=CertificateStore source=kind source: *v1beta1.CertificateStore
+time=2026-02-20T12:40:24.472086061Z level=info msg=Starting Controller controller=certificatestore controllerGroup=config.ratify.deislabs.io controllerKind=CertificateStore
+time=2026-02-20T12:40:24.472235715Z level=info msg=Starting EventSource controller=namespacedstore controllerGroup=config.ratify.deislabs.io controllerKind=NamespacedStore source=kind source: *v1beta1.NamespacedStore
+time=2026-02-20T12:40:24.472249496Z level=info msg=Starting Controller controller=namespacedstore controllerGroup=config.ratify.deislabs.io controllerKind=NamespacedStore
+time=2026-02-20T12:40:24.472369831Z level=info msg=Starting EventSource controller=policy controllerGroup=config.ratify.deislabs.io controllerKind=Policy source=kind source: *v1beta1.Policy
+time=2026-02-20T12:40:24.472405803Z level=info msg=Starting EventSource controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider source=kind source: *v1beta1.KeyManagementProvider
+time=2026-02-20T12:40:24.472434207Z level=info msg=Starting Controller controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider
+time=2026-02-20T12:40:24.472427087Z level=info msg=Starting Controller controller=policy controllerGroup=config.ratify.deislabs.io controllerKind=Policy
+time=2026-02-20T12:40:24.472565041Z level=info msg=Starting EventSource controller=namespacedkeymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=NamespacedKeyManagementProvider source=kind source: *v1beta1.NamespacedKeyManagementProvider
+time=2026-02-20T12:40:24.472595623Z level=info msg=Starting Controller controller=namespacedkeymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=NamespacedKeyManagementProvider
+time=2026-02-20T12:40:24.639592964Z level=info msg=[cert-rotation] refreshing CA and server certs name=cert-rotation
+time=2026-02-20T12:40:24.678796871Z level=info msg=Starting workers controller=cert-rotator worker count=1
+time=2026-02-20T12:40:24.679068421Z level=info msg=[cert-rotation] refreshing CA and server certs name=cert-rotation
+time=2026-02-20T12:40:24.863222717Z level=info msg=Starting workers controller=verifier controllerGroup=config.ratify.deislabs.io controllerKind=Verifier worker count=1
+time=2026-02-20T12:40:24.879899025Z level=info msg=Starting workers controller=store controllerGroup=config.ratify.deislabs.io controllerKind=Store worker count=1
+time=2026-02-20T12:40:24.879931719Z level=info msg=Starting workers controller=namespacedstore controllerGroup=config.ratify.deislabs.io controllerKind=NamespacedStore worker count=1
+time=2026-02-20T12:40:24.879908156Z level=info msg=Starting workers controller=policy controllerGroup=config.ratify.deislabs.io controllerKind=Policy worker count=1
+time=2026-02-20T12:40:24.879961363Z level=info msg=Starting workers controller=certificatestore controllerGroup=config.ratify.deislabs.io controllerKind=CertificateStore worker count=1
+time=2026-02-20T12:40:24.879963571Z level=info msg=Starting workers controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider worker count=1
+time=2026-02-20T12:40:24.880050124Z level=info msg=Reconciling Cluster Policy ratify-policy
+time=2026-02-20T12:40:24.879961379Z level=info msg=Starting workers controller=namespacedpolicy controllerGroup=config.ratify.deislabs.io controllerKind=NamespacedPolicy worker count=1
+time=2026-02-20T12:40:24.87997493Z level=info msg=Starting workers controller=namespacedverifier controllerGroup=config.ratify.deislabs.io controllerKind=NamespacedVerifier worker count=1
+time=2026-02-20T12:40:24.880204457Z level=info msg=selected policy provider: configpolicy
+time=2026-02-20T12:40:24.880598157Z level=info msg=Starting workers controller=namespacedkeymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=NamespacedKeyManagementProvider worker count=1
+time=2026-02-20T12:40:24.99277814Z level=info msg=Reconciling Cluster Policy ratify-policy
+time=2026-02-20T12:40:24.99282315Z level=info msg=selected policy provider: configpolicy
+time=2026-02-20T12:40:25.005773885Z level=info msg=[cert-rotation] server certs refreshed name=cert-rotation
+time=2026-02-20T12:40:25.005835707Z level=info msg=[cert-rotation] certs are ready in /usr/local/tls name=cert-rotation
+time=2026-02-20T12:40:25.159403391Z level=error msg=[cert-rotation] could not refresh CA and server certs error=Operation cannot be fulfilled on secrets "ratify-tls": the object has been modified; please apply your changes to the latest version and try again name=cert-rotation
+time=2026-02-20T12:40:25.170942935Z level=info msg=[cert-rotation] no cert refresh needed name=cert-rotation
+time=2026-02-20T12:40:25.1710678Z level=error msg=[cert-rotation] Webhook not found. Unable to update certificate. error=Provider.externaldata.gatekeeper.sh "ratify-mutation-provider" not found gvk=externaldata.gatekeeper.sh/v1beta1, Kind=Provider name=ratify-mutation-provider
+time=2026-02-20T12:40:25.171113572Z level=info msg=[cert-rotation] Ensuring CA cert gvk=externaldata.gatekeeper.sh/v1beta1, Kind=Provider name=ratify-provider
+time=2026-02-20T12:40:25.18981679Z level=info msg=[cert-rotation] no cert refresh needed name=cert-rotation
+time=2026-02-20T12:40:25.189939246Z level=error msg=[cert-rotation] Webhook not found. Unable to update certificate. error=Provider.externaldata.gatekeeper.sh "ratify-mutation-provider" not found gvk=externaldata.gatekeeper.sh/v1beta1, Kind=Provider name=ratify-mutation-provider
+time=2026-02-20T12:40:25.189967941Z level=info msg=[cert-rotation] Ensuring CA cert gvk=externaldata.gatekeeper.sh/v1beta1, Kind=Provider name=ratify-provider
+time=2026-02-20T12:40:25.207443381Z level=info msg=[cert-rotation] no cert refresh needed name=cert-rotation
+time=2026-02-20T12:40:25.207598648Z level=error msg=[cert-rotation] Webhook not found. Unable to update certificate. error=Provider.externaldata.gatekeeper.sh "ratify-mutation-provider" not found gvk=externaldata.gatekeeper.sh/v1beta1, Kind=Provider name=ratify-mutation-provider
+time=2026-02-20T12:40:25.207630795Z level=info msg=[cert-rotation] Ensuring CA cert gvk=externaldata.gatekeeper.sh/v1beta1, Kind=Provider name=ratify-provider
+time=2026-02-20T12:40:26.1827307Z level=info msg=[cert-rotation] CA certs are injected to webhooks name=cert-rotation
+time=2026-02-20T12:40:26.182769711Z level=info msg=starting server using TLS: [certFile:/usr/local/tls/tls.crt] [keyFile:/usr/local/tls/tls.key]
+time=2026-02-20T12:40:27.184045264Z level=info msg=Starting TLS certificate watcher
+time=2026-02-20T12:44:26.386260326Z level=info msg=reconciling cluster store 'store-oras'
+time=2026-02-20T12:44:26.386309221Z level=info msg=Version was empty, setting to default version: 1.0.0
+time=2026-02-20T12:44:26.38631709Z level=info msg=Address was empty, setting to default path /.ratify/plugins
+time=2026-02-20T12:44:26.386375514Z level=info msg=selected default auth provider: dockerConfig
+time=2026-02-20T12:44:26.387163895Z level=info msg=store 'oras' added to store map in namespace: 
+time=2026-02-20T12:44:26.391302704Z level=error msg=stores.config.ratify.deislabs.io "store-oras" not found,unable to update store error status
+time=2026-02-20T12:44:26.984594685Z level=info msg=reconciling verifier 'verifier-notary-inline'
+time=2026-02-20T12:44:26.984647633Z level=info msg=Version was empty, setting to default version: 1.0.0
+time=2026-02-20T12:44:26.984651861Z level=info msg=Address was empty, setting to default path: /.ratify/plugins
+time=2026-02-20T12:44:26.984835704Z level=info msg=verifier 'verifier-notary-inline' added to verifier map in namespace: 
+time=2026-02-20T12:44:26.988357759Z level=error msg=verifiers.config.ratify.deislabs.io "verifier-notary-inline" not found,unable to update verifier status
+time=2026-02-20T12:47:24.502837086Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T12:47:24.515655186Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=5bd6cdc6-08ab-403e-ab63-931a4fa4949e
+time=2026-02-20T12:47:24.52090937Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T12:47:24.530068472Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=77ec5e70-6ff5-4ad3-ab03-0caf0413b2ad
+time=2026-02-20T12:47:24.540324342Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T12:47:24.549226791Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=9e20218b-a5cb-480e-beb2-c506fa9916f2
+time=2026-02-20T12:47:24.56942063Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T12:47:24.581021589Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=4416faf4-065f-45a5-bffa-78cb9fc2cf66
+time=2026-02-20T12:47:24.621289911Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T12:47:24.708575047Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=c95c684e-c047-4762-a86b-2273ab4a563e
+time=2026-02-20T12:47:24.78913911Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T12:47:24.798531926Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=927883d1-9d41-4e73-8b85-a477647e2d5e
+time=2026-02-20T12:47:24.958728575Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T12:47:24.970252471Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=6ca25232-3858-4303-b4b2-5b027fffebe1
+time=2026-02-20T12:47:25.290693478Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T12:47:25.313339079Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=10f76dda-9726-4b7f-a47a-465db6e50b23
+time=2026-02-20T12:47:25.953702797Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T12:47:25.962250231Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=61aa6f00-8cdb-4d3a-b3e9-66b9a1e54561
+time=2026-02-20T12:47:27.243066719Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T12:47:27.252582998Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=8ec3eb45-217b-4e3b-adf3-3aae817ff675
+time=2026-02-20T12:47:29.812840807Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T12:47:29.825441562Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=9f07e08e-69e7-4a0f-be13-a24462c445c9
+time=2026-02-20T12:47:34.945704379Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T12:47:34.955548605Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=a3b19c1c-0013-45e0-a085-c1b021243647
+time=2026-02-20T12:47:45.196254057Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T12:47:45.208574133Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=a9f6d525-4b02-4a72-9188-26392e310814
+time=2026-02-20T12:48:05.689350294Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T12:48:05.700166001Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=c2a64f94-5780-4e6e-b5a3-44e9c4210728
+time=2026-02-20T12:48:46.660802876Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T12:48:46.677077496Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=7f93e895-bcc8-4640-b6a9-72c0ce26d107
+time=2026-02-20T12:50:08.597482858Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T12:50:08.607748585Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=9bc13fed-eebd-4db6-bbb8-a1f3ce413c1e
+time=2026-02-20T12:52:52.448613412Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T12:52:52.459049608Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=11bc67b3-af9a-4bd5-bb6f-eb8d67ed9139
+time=2026-02-20T12:58:02.854261453Z level=info msg=Reconciling Cluster Policy ratify-policy
+time=2026-02-20T12:58:02.854340958Z level=info msg=selected policy provider: configpolicy
+time=2026-02-20T12:58:20.139545497Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T12:58:20.151354228Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=08ce8b8d-d931-439f-8f01-364d85bebca1
+time=2026-02-20T13:09:15.51222359Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T13:09:15.522731211Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=f9cb811b-490c-4d54-8d01-9418829c1bca
+time=2026-02-20T13:25:55.52302303Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T13:25:55.532169437Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=a880bf7c-538f-40c8-878f-0f26e4108526
+time=2026-02-20T13:42:35.532327215Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T13:42:35.54303648Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=1aa754ac-9afb-431a-b922-36cec86a465a
+time=2026-02-20T13:59:15.54326345Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T13:59:15.554204477Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=6f255292-97bf-453f-920f-9654189d7a4e
+time=2026-02-20T14:15:55.554592648Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T14:15:55.56831842Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=e2183b7d-6316-49ce-bf40-d884adbe6e50
+time=2026-02-20T14:32:35.568768958Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T14:32:35.578752178Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=84d3e70d-da75-4764-be94-afeb1651590f
+time=2026-02-20T14:49:15.578972999Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T14:49:15.592618987Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=1e6ce80f-ee51-4157-b6c8-b657ddac8ebf
+time=2026-02-20T15:05:55.593228776Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T15:05:55.605625675Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=63d478c5-192a-4acd-893f-c82f80342cba
+time=2026-02-20T15:22:35.606718942Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T15:22:35.619299742Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=b7f2ab64-0de3-4c1c-8bd7-659b2df3d4c9
+time=2026-02-20T15:39:15.61949682Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T15:39:15.630447273Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=e6919cc9-a8fd-436b-8da1-7eff5eda9921
+time=2026-02-20T15:55:55.631228162Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T15:55:55.641021401Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=70e1a7e4-f8f8-4db8-abd3-4202746508d5
+time=2026-02-20T16:12:35.641358651Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T16:12:35.650546829Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=8ce60508-7347-4421-bce9-8578ce80f5a6
+time=2026-02-20T16:29:15.65140892Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T16:29:15.663291341Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=8c35e8b9-bd51-405d-ace2-057eaa09abe4
+time=2026-02-20T16:45:55.663970601Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T16:45:55.676475337Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=b8f1fd22-6791-4a81-910f-4c08d5974f94
+time=2026-02-20T17:02:35.677495372Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T17:02:35.687373343Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=2e3ba6dc-c2d8-4ed4-a9c4-ba55bad4b434
+time=2026-02-20T17:19:15.688021921Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T17:19:15.698414631Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=48ee78ac-9ba3-466e-bc18-2490149f4649
+time=2026-02-20T17:35:55.699210069Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T17:35:55.71067663Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=f37c563d-2bc5-4fbd-a8fb-44ee50e745d0
+time=2026-02-20T17:52:35.711343351Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T17:52:35.722599802Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=5ed84d23-5671-4fb4-8bf6-a94e7d36d8b4
+time=2026-02-20T18:09:15.722850342Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T18:09:15.733424922Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=63faf545-488a-428a-88fc-1ada574fb222
+time=2026-02-20T18:25:55.733685901Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T18:25:55.74378382Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=6c4db4a5-4c21-4fb1-b73d-30d5b6e4891d
+time=2026-02-20T18:42:35.744878732Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T18:42:35.753627377Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=ff9be08e-e6d2-4c64-b4b5-cdf097426ec7
+time=2026-02-20T18:59:15.753823224Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T18:59:15.763765125Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=6699766b-5296-4539-b35c-04e68ba15103
+time=2026-02-20T19:15:55.764868951Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T19:15:55.774796657Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=662c0fd0-0347-4248-bae1-415578e8a140
+time=2026-02-20T19:32:35.775833149Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T19:32:35.786587899Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=06c7cd78-b964-454c-9d30-8918308a362c
+time=2026-02-20T19:49:15.786778701Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T19:49:15.795693847Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=3d3c3bc9-ca07-48e2-90a9-2582e6fab665
+time=2026-02-20T20:05:55.796656987Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T20:05:55.807549884Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=0c6e2c8e-9a91-4d2c-bb98-2158b7b3ea7d
+time=2026-02-20T20:22:35.808664522Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T20:22:35.818134058Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=581e8930-b24f-41e9-93ee-4eaf63367e0e
+time=2026-02-20T20:39:15.818995019Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T20:39:15.82832075Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=5ba31fe9-9934-4e6e-b1a1-c2df397e1cee
+time=2026-02-20T20:55:55.828695771Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T20:55:55.840228024Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=e47e70ac-12af-4895-9cf2-963d36ad0129
+time=2026-02-20T21:12:35.840897226Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T21:12:35.853377489Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=bf5a4e35-b91e-468b-b0d0-5d459e0f72ee
+time=2026-02-20T21:29:15.853785592Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T21:29:15.864240646Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=fe5ff03a-9458-4b99-a04a-87826b065490
+time=2026-02-20T21:45:55.865240608Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T21:45:55.875777144Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=768ee1ef-3012-4789-b662-6ab70420626d
+time=2026-02-20T22:02:35.87670464Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T22:02:35.890423041Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=f84107f5-0cd8-44df-a972-8ec76f043657
+time=2026-02-20T22:12:52.727898433Z level=info msg=reconciling verifier 'verifier-notary-inline'
+time=2026-02-20T22:12:52.727963264Z level=info msg=Version was empty, setting to default version: 1.0.0
+time=2026-02-20T22:12:52.727967618Z level=info msg=Address was empty, setting to default path: /.ratify/plugins
+time=2026-02-20T22:12:52.728095934Z level=info msg=verifier 'verifier-notary-inline' added to verifier map in namespace: 
+time=2026-02-20T22:12:52.732278708Z level=error msg=verifiers.config.ratify.deislabs.io "verifier-notary-inline" not found,unable to update verifier status
+time=2026-02-20T22:19:15.891416623Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T22:19:15.906581557Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=b0ab0d32-45f2-4a95-b71a-dc1b952aa8ce
+time=2026-02-20T22:35:55.906754763Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T22:35:55.925196513Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=a0765543-65df-411c-bf64-c1d4673f01c5
+time=2026-02-20T22:52:35.925372744Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T22:52:35.934788981Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=13c155cf-6eb5-41cb-a6ea-58e80a6d35df
+time=2026-02-20T23:09:15.935871354Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T23:09:15.947311841Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=8eec69df-8b65-4d1b-97ae-2e3f1e5d7b31
+time=2026-02-20T23:10:33.22830661Z level=info msg=Reconciling Cluster Policy ratify-policy
+time=2026-02-20T23:10:33.22840267Z level=info msg=selected policy provider: configpolicy
+time=2026-02-20T23:25:55.947852853Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T23:25:55.958018483Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=862e5212-a372-48c6-9a65-0176955327ff
+time=2026-02-20T23:42:35.958206448Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T23:42:35.968680583Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=4bf13e79-e2c5-4b36-87f7-7793d1d41395
+time=2026-02-20T23:59:15.969459902Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-20T23:59:15.979047004Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=603546e0-ade7-42db-9d81-0843f2585aa0
+time=2026-02-21T00:15:55.979359157Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T00:15:55.989984163Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=50a8ff5c-7ee2-447f-9486-94e824ad5e98
+time=2026-02-21T00:32:35.990753859Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T00:32:36.004939064Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=45e786ee-aa04-4676-a832-c46ca6aa81db
+time=2026-02-21T00:40:25.006320003Z level=info msg=[cert-rotation] no cert refresh needed name=cert-rotation
+time=2026-02-21T00:49:16.005325631Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T00:49:16.022065798Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=3ed81a46-4b9b-4a25-8758-ddfe0d0d520e
+time=2026-02-21T01:05:56.022499816Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T01:05:56.031862335Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=1bc8277d-1302-4e64-ac06-116d9e43e512
+time=2026-02-21T01:22:36.032351179Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T01:22:36.042900045Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=014c2c80-7ba7-4e05-91e8-1a3008078549
+time=2026-02-21T01:39:16.04331543Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T01:39:16.05330775Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=879a32d3-7b0a-4f63-866b-8dda8b687f59
+time=2026-02-21T01:55:56.054067158Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T01:55:56.064488211Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=e1a79292-c6ec-4110-b7e1-9d458612c2b3
+time=2026-02-21T02:12:36.064683411Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T02:12:36.076632919Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=e3cfe651-8071-4140-b8c4-51c88074032f
+time=2026-02-21T02:29:16.076728022Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T02:29:16.086865258Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=20a64c00-719e-42f0-b60c-1e01e99add41
+time=2026-02-21T02:45:56.087593373Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T02:45:56.097423972Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=9dfcb54e-b142-44f5-9bad-fa9c6bec6f44
+time=2026-02-21T03:02:36.098438299Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T03:02:36.112501257Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=8b48d424-de3c-4179-8d02-134971aa0eaf
+time=2026-02-21T03:19:16.112609477Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T03:19:16.122101182Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=aba81e91-5ffa-4bd3-8eb4-c8c29dbf3c2d
+time=2026-02-21T03:35:56.122169764Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T03:35:56.132631037Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=06731e20-bb90-41b3-b0cb-d1918b50596a
+time=2026-02-21T03:52:36.133753877Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T03:52:36.145287946Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=db987261-86e3-4403-837d-652d8d575200
+time=2026-02-21T04:09:16.146029722Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T04:09:16.155954288Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=cfbdb7df-38b7-417c-8a06-34b96fd54c07
+time=2026-02-21T04:25:56.156728737Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T04:25:56.166747931Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=81218c67-b145-46bb-be31-374fad0013c0
+time=2026-02-21T04:42:36.167476394Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T04:42:36.177325392Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=bd5d9e61-38d0-4da8-8a0d-0eb6cd210f59
+time=2026-02-21T04:59:16.177555897Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T04:59:16.193910211Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=cd0d1236-7f83-439a-8c73-f9eacc5afd31
+time=2026-02-21T05:15:56.194180705Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T05:15:56.204299168Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=0ec1b7b2-18f6-4fbe-b334-305514a8fe0e
+time=2026-02-21T05:32:36.204483939Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T05:32:36.213886513Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=30f2e71b-99c4-4b9e-9ca9-0b8b98f1cc21
+time=2026-02-21T05:49:16.214147749Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T05:49:16.224749715Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=96b7e3c6-daf2-4d92-bd7d-65bc6ede5ae1
+time=2026-02-21T06:05:56.224980892Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T06:05:56.238829275Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=97b8d25b-6ef3-4a20-a9d9-1b4c6e50e0d5
+time=2026-02-21T06:22:36.239212272Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T06:22:36.250585Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=3a014fab-c5bd-4041-8238-d685b167f170
+time=2026-02-21T06:39:16.251331119Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T06:39:16.260810101Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=4fa463c3-8507-4a8e-9ed9-0e0bc41f7aae
+time=2026-02-21T06:53:26.356482616Z level=info msg=reconciling cluster store 'store-oras'
+time=2026-02-21T06:53:26.35653866Z level=info msg=Version was empty, setting to default version: 1.0.0
+time=2026-02-21T06:53:26.356545287Z level=info msg=Address was empty, setting to default path /.ratify/plugins
+time=2026-02-21T06:53:26.356572269Z level=info msg=selected default auth provider: dockerConfig
+time=2026-02-21T06:53:26.35671098Z level=info msg=store 'oras' added to store map in namespace: 
+time=2026-02-21T06:53:26.360283958Z level=error msg=stores.config.ratify.deislabs.io "store-oras" not found,unable to update store error status
+time=2026-02-21T06:55:56.261731593Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T06:55:56.272451291Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=0ced2818-a7d5-4edd-a099-28d51009bae0
+time=2026-02-21T07:12:36.273409811Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T07:12:36.282935621Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=133f4fbe-d0b5-4cf7-b22d-1c99d86f2af2
+time=2026-02-21T07:29:16.283553781Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T07:29:16.295248728Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=a5c9d2b7-cd58-4f87-b81e-907ca3a36be9
+time=2026-02-21T07:45:16.402222999Z level=info msg=reconciling verifier 'verifier-notary-inline'
+time=2026-02-21T07:45:16.402295617Z level=info msg=Version was empty, setting to default version: 1.0.0
+time=2026-02-21T07:45:16.402299688Z level=info msg=Address was empty, setting to default path: /.ratify/plugins
+time=2026-02-21T07:45:16.402413628Z level=info msg=verifier 'verifier-notary-inline' added to verifier map in namespace: 
+time=2026-02-21T07:45:16.407122575Z level=error msg=verifiers.config.ratify.deislabs.io "verifier-notary-inline" not found,unable to update verifier status
+time=2026-02-21T07:45:56.295713282Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T07:45:56.30884106Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=148cae6c-40f5-45d3-8e6a-49c6489d8e57
+time=2026-02-21T08:01:38.752697477Z level=info msg=[cert-rotation] no cert refresh needed name=cert-rotation
+time=2026-02-21T08:01:38.752805162Z level=error msg=[cert-rotation] Webhook not found. Unable to update certificate. error=Provider.externaldata.gatekeeper.sh "ratify-mutation-provider" not found gvk=externaldata.gatekeeper.sh/v1beta1, Kind=Provider name=ratify-mutation-provider
+time=2026-02-21T08:01:38.752838371Z level=info msg=[cert-rotation] Ensuring CA cert gvk=externaldata.gatekeeper.sh/v1beta1, Kind=Provider name=ratify-provider
+time=2026-02-21T08:02:36.309392846Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T08:02:36.320789452Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=7715522c-cfdf-4150-a27c-bb522beaed9b
+time=2026-02-21T08:19:16.321592253Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T08:19:16.330197375Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=fbebdbf4-87d8-4e2d-89c0-d65684c771c4
+time=2026-02-21T08:35:56.331118091Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T08:35:56.339827835Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=423af0c2-e75c-46ad-a46e-9d094fc05c84
+time=2026-02-21T08:52:36.339970329Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T08:52:36.35161504Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=f3e69655-ebe5-425f-a539-c73f7314c466
+time=2026-02-21T09:09:16.35228769Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T09:09:16.3620898Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=14905e87-51e1-4e50-a10e-718a9bd57112
+time=2026-02-21T09:23:03.602057525Z level=info msg=Reconciling Cluster Policy ratify-policy
+time=2026-02-21T09:23:03.602135396Z level=info msg=selected policy provider: configpolicy
+time=2026-02-21T09:25:56.36273839Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T09:25:56.373121496Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=c22bc791-75ec-44c2-b128-3a72c0d970ae
+time=2026-02-21T09:32:13.018332013Z level=info msg=[cert-rotation] no cert refresh needed name=cert-rotation
+time=2026-02-21T09:32:13.018435838Z level=error msg=[cert-rotation] Webhook not found. Unable to update certificate. error=Provider.externaldata.gatekeeper.sh "ratify-mutation-provider" not found gvk=externaldata.gatekeeper.sh/v1beta1, Kind=Provider name=ratify-mutation-provider
+time=2026-02-21T09:32:13.018469846Z level=info msg=[cert-rotation] Ensuring CA cert gvk=externaldata.gatekeeper.sh/v1beta1, Kind=Provider name=ratify-provider
+time=2026-02-21T09:42:36.374071861Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T09:42:36.384886932Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=1cfb351a-a414-4c2c-b485-f0a82497b02c
+time=2026-02-21T09:59:16.385075464Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T09:59:16.394120476Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=b70c129e-67c1-4c4d-948c-569ebd222f98
+time=2026-02-21T10:15:56.395029841Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T10:15:56.404590205Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=42378e38-ca2e-4ec2-8aac-e62a6f4b4dfc
+time=2026-02-21T10:19:47.828861467Z level=warning msg=Digest should be used instead of tagged reference. The resolved digest may not point to the same signed artifact, since tags are mutable. component-type=server go.version=go1.23.3 namespace= trace-id=1b025362-a0f3-49a1-a3b7-15cc13606d59
+time=2026-02-21T10:19:47.82888452Z level=info msg=verifying subject ghcr.io/deislabs/ratify/notary-image:signed component-type=server go.version=go1.23.3 namespace= trace-id=1b025362-a0f3-49a1-a3b7-15cc13606d59
+time=2026-02-21T10:19:48.118087846Z level=info msg=Resolve of the image completed successfully the digest is sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b component-type=executor go.version=go1.23.3 namespace= trace-id=1b025362-a0f3-49a1-a3b7-15cc13606d59
+time=2026-02-21T10:19:49.395287714Z level=info msg=Trust policy configuration: &{Name:default RegistryScopes:[*] SignatureVerification:{VerificationLevel:strict Override:map[]} TrustStores:[ca:certs] TrustedIdentities:[*]} component-type=verifier go.version=go1.23.3 namespace= trace-id=1b025362-a0f3-49a1-a3b7-15cc13606d59
+time=2026-02-21T10:19:49.395624778Z level=warning msg=unable to fetch certificates for Key Management Provider certstore-inline: failed to access non-existent key management provider: certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=1b025362-a0f3-49a1-a3b7-15cc13606d59
+time=2026-02-21T10:19:49.395639088Z level=warning msg=no certificate fetched for Key Management Provider certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=1b025362-a0f3-49a1-a3b7-15cc13606d59
+time=2026-02-21T10:19:49.395648422Z level=warning msg=unable to fetch certificates for Certificate Store certstore-inline: failed to access non-existent certificate store: certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=1b025362-a0f3-49a1-a3b7-15cc13606d59
+time=2026-02-21T10:19:49.395656519Z level=warning msg=no certificate fetched for Certificate Store certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=1b025362-a0f3-49a1-a3b7-15cc13606d59
+time=2026-02-21T10:19:49.395670431Z level=error msg=authenticity validation failed. Failure reason: unable to fetch certificates for namedStore: certs component-type=verifier go.version=go1.23.3 namespace= trace-id=1b025362-a0f3-49a1-a3b7-15cc13606d59
+time=2026-02-21T10:19:49.395785936Z level=info msg=verify result for subject ghcr.io/deislabs/ratify/notary-image:signed: {
+  "verifierReports": [
+    {
+      "isSuccess": false,
+      "name": "verifier-notary-inline",
+      "type": "notation",
+      "message": "Original Error: (Original Error: (unable to fetch certificates for namedStore: certs), Error: verify plugin failure, Code: VERIFY_PLUGIN_FAILURE, Plugin Name: verifier-notary-inline, Component Type: verifier, Documentation: https://ratify.dev/docs/troubleshoot/verifier/notation, Detail: failed to verify signature of digest), Error: verify reference failure, Code: VERIFY_REFERENCE_FAILURE, Plugin Name: verifier-notary-inline, Component Type: verifier",
+      "artifactType": "application/vnd.cncf.notary.signature"
+    }
+  ]
+} component-type=server go.version=go1.23.3 namespace= trace-id=1b025362-a0f3-49a1-a3b7-15cc13606d59
+time=2026-02-21T10:25:17.430320677Z level=info msg=verifying subject ghcr.io/deislabs/ratify/notary-image@sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b component-type=server go.version=go1.23.3 namespace= trace-id=7cb3014e-9412-4ab0-a2f5-bf2edb548421
+time=2026-02-21T10:25:17.717654461Z level=info msg=Resolve of the image completed successfully the digest is sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b component-type=executor go.version=go1.23.3 namespace= trace-id=7cb3014e-9412-4ab0-a2f5-bf2edb548421
+time=2026-02-21T10:25:18.494448589Z level=info msg=Trust policy configuration: &{Name:default RegistryScopes:[*] SignatureVerification:{VerificationLevel:strict Override:map[]} TrustStores:[ca:certs] TrustedIdentities:[*]} component-type=verifier go.version=go1.23.3 namespace= trace-id=7cb3014e-9412-4ab0-a2f5-bf2edb548421
+time=2026-02-21T10:25:18.494725805Z level=warning msg=unable to fetch certificates for Key Management Provider certstore-inline: failed to access non-existent key management provider: certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=7cb3014e-9412-4ab0-a2f5-bf2edb548421
+time=2026-02-21T10:25:18.494738106Z level=warning msg=no certificate fetched for Key Management Provider certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=7cb3014e-9412-4ab0-a2f5-bf2edb548421
+time=2026-02-21T10:25:18.494749054Z level=warning msg=unable to fetch certificates for Certificate Store certstore-inline: failed to access non-existent certificate store: certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=7cb3014e-9412-4ab0-a2f5-bf2edb548421
+time=2026-02-21T10:25:18.494755076Z level=warning msg=no certificate fetched for Certificate Store certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=7cb3014e-9412-4ab0-a2f5-bf2edb548421
+time=2026-02-21T10:25:18.49476129Z level=error msg=authenticity validation failed. Failure reason: unable to fetch certificates for namedStore: certs component-type=verifier go.version=go1.23.3 namespace= trace-id=7cb3014e-9412-4ab0-a2f5-bf2edb548421
+time=2026-02-21T10:25:18.494828709Z level=info msg=verify result for subject ghcr.io/deislabs/ratify/notary-image@sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b: {
+  "verifierReports": [
+    {
+      "isSuccess": false,
+      "name": "verifier-notary-inline",
+      "type": "notation",
+      "message": "Original Error: (Original Error: (unable to fetch certificates for namedStore: certs), Error: verify plugin failure, Code: VERIFY_PLUGIN_FAILURE, Plugin Name: verifier-notary-inline, Component Type: verifier, Documentation: https://ratify.dev/docs/troubleshoot/verifier/notation, Detail: failed to verify signature of digest), Error: verify reference failure, Code: VERIFY_REFERENCE_FAILURE, Plugin Name: verifier-notary-inline, Component Type: verifier",
+      "artifactType": "application/vnd.cncf.notary.signature"
+    }
+  ]
+} component-type=server go.version=go1.23.3 namespace= trace-id=7cb3014e-9412-4ab0-a2f5-bf2edb548421
+time=2026-02-21T10:26:37.769684735Z level=warning msg=Digest should be used instead of tagged reference. The resolved digest may not point to the same signed artifact, since tags are mutable. component-type=server go.version=go1.23.3 namespace= trace-id=fb89593a-6c37-4388-a501-1ba6d2a27011
+time=2026-02-21T10:26:37.769705257Z level=info msg=verifying subject ghcr.io/deislabs/ratify/notary-image:unsigned component-type=server go.version=go1.23.3 namespace= trace-id=fb89593a-6c37-4388-a501-1ba6d2a27011
+time=2026-02-21T10:26:38.049717742Z level=info msg=Resolve of the image completed successfully the digest is sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4 component-type=executor go.version=go1.23.3 namespace= trace-id=fb89593a-6c37-4388-a501-1ba6d2a27011
+time=2026-02-21T10:26:38.739442236Z level=info msg=verify result for subject ghcr.io/deislabs/ratify/notary-image:unsigned: {
+  "verifierReports": [
+    {
+      "subject": "ghcr.io/deislabs/ratify/notary-image:unsigned",
+      "isSuccess": false,
+      "message": "verification failed: Error: no verifier report, Code: NO_VERIFIER_REPORT, Component Type: executor, Description: No verifier report was generated. This might be due to various factors, such as lack of artifacts attached to the image, a misconfiguration in the Referrer Store preventing access to the registry, or the absence of appropriate verifiers corresponding to the referenced image artifacts."
+    }
+  ]
+} component-type=server go.version=go1.23.3 namespace= trace-id=fb89593a-6c37-4388-a501-1ba6d2a27011
+time=2026-02-21T10:32:24.84497062Z level=warning msg=Digest should be used instead of tagged reference. The resolved digest may not point to the same signed artifact, since tags are mutable. component-type=server go.version=go1.23.3 namespace= trace-id=4d93f604-a4cb-43be-abb6-1bfb441ba10e
+time=2026-02-21T10:32:24.844993485Z level=info msg=verifying subject ghcr.io/deislabs/ratify/notary-image:unsigned component-type=server go.version=go1.23.3 namespace= trace-id=4d93f604-a4cb-43be-abb6-1bfb441ba10e
+time=2026-02-21T10:32:25.123289814Z level=info msg=Resolve of the image completed successfully the digest is sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4 component-type=executor go.version=go1.23.3 namespace= trace-id=4d93f604-a4cb-43be-abb6-1bfb441ba10e
+time=2026-02-21T10:32:25.798341305Z level=info msg=verify result for subject ghcr.io/deislabs/ratify/notary-image:unsigned: {
+  "verifierReports": [
+    {
+      "subject": "ghcr.io/deislabs/ratify/notary-image:unsigned",
+      "isSuccess": false,
+      "message": "verification failed: Error: no verifier report, Code: NO_VERIFIER_REPORT, Component Type: executor, Description: No verifier report was generated. This might be due to various factors, such as lack of artifacts attached to the image, a misconfiguration in the Referrer Store preventing access to the registry, or the absence of appropriate verifiers corresponding to the referenced image artifacts."
+    }
+  ]
+} component-type=server go.version=go1.23.3 namespace= trace-id=4d93f604-a4cb-43be-abb6-1bfb441ba10e
+time=2026-02-21T10:32:36.405497072Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T10:32:36.415996488Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=d65decda-a3d1-4f7d-805f-85212d0d2422
+time=2026-02-21T10:35:17.42937001Z level=info msg=verifying subject ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4 component-type=server go.version=go1.23.3 namespace= trace-id=eaac6aa9-4d1b-4e53-8743-27f535175fe7
+time=2026-02-21T10:35:17.783735204Z level=info msg=Resolve of the image completed successfully the digest is sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4 component-type=executor go.version=go1.23.3 namespace= trace-id=eaac6aa9-4d1b-4e53-8743-27f535175fe7
+time=2026-02-21T10:35:18.286801298Z level=info msg=verify result for subject ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4: {
+  "verifierReports": [
+    {
+      "subject": "ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4",
+      "isSuccess": false,
+      "message": "verification failed: Error: no verifier report, Code: NO_VERIFIER_REPORT, Component Type: executor, Description: No verifier report was generated. This might be due to various factors, such as lack of artifacts attached to the image, a misconfiguration in the Referrer Store preventing access to the registry, or the absence of appropriate verifiers corresponding to the referenced image artifacts."
+    }
+  ]
+} component-type=server go.version=go1.23.3 namespace= trace-id=eaac6aa9-4d1b-4e53-8743-27f535175fe7
+time=2026-02-21T10:42:05.505891021Z level=warning msg=Digest should be used instead of tagged reference. The resolved digest may not point to the same signed artifact, since tags are mutable. component-type=server go.version=go1.23.3 namespace= trace-id=44b20cec-8901-4cd5-8d0e-3c2cfd0174da
+time=2026-02-21T10:42:05.505919071Z level=info msg=verifying subject ghcr.io/deislabs/ratify/notary-image:signed component-type=server go.version=go1.23.3 namespace= trace-id=44b20cec-8901-4cd5-8d0e-3c2cfd0174da
+time=2026-02-21T10:42:05.813632709Z level=info msg=Resolve of the image completed successfully the digest is sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b component-type=executor go.version=go1.23.3 namespace= trace-id=44b20cec-8901-4cd5-8d0e-3c2cfd0174da
+time=2026-02-21T10:42:06.630558326Z level=info msg=Trust policy configuration: &{Name:default RegistryScopes:[*] SignatureVerification:{VerificationLevel:strict Override:map[]} TrustStores:[ca:certs] TrustedIdentities:[*]} component-type=verifier go.version=go1.23.3 namespace= trace-id=44b20cec-8901-4cd5-8d0e-3c2cfd0174da
+time=2026-02-21T10:42:06.630829842Z level=warning msg=unable to fetch certificates for Key Management Provider certstore-inline: failed to access non-existent key management provider: certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=44b20cec-8901-4cd5-8d0e-3c2cfd0174da
+time=2026-02-21T10:42:06.630842774Z level=warning msg=no certificate fetched for Key Management Provider certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=44b20cec-8901-4cd5-8d0e-3c2cfd0174da
+time=2026-02-21T10:42:06.630852143Z level=warning msg=unable to fetch certificates for Certificate Store certstore-inline: failed to access non-existent certificate store: certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=44b20cec-8901-4cd5-8d0e-3c2cfd0174da
+time=2026-02-21T10:42:06.630858388Z level=warning msg=no certificate fetched for Certificate Store certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=44b20cec-8901-4cd5-8d0e-3c2cfd0174da
+time=2026-02-21T10:42:06.630865633Z level=error msg=authenticity validation failed. Failure reason: unable to fetch certificates for namedStore: certs component-type=verifier go.version=go1.23.3 namespace= trace-id=44b20cec-8901-4cd5-8d0e-3c2cfd0174da
+time=2026-02-21T10:42:06.630934348Z level=info msg=verify result for subject ghcr.io/deislabs/ratify/notary-image:signed: {
+  "verifierReports": [
+    {
+      "isSuccess": false,
+      "name": "verifier-notary-inline",
+      "type": "notation",
+      "message": "Original Error: (Original Error: (unable to fetch certificates for namedStore: certs), Error: verify plugin failure, Code: VERIFY_PLUGIN_FAILURE, Plugin Name: verifier-notary-inline, Component Type: verifier, Documentation: https://ratify.dev/docs/troubleshoot/verifier/notation, Detail: failed to verify signature of digest), Error: verify reference failure, Code: VERIFY_REFERENCE_FAILURE, Plugin Name: verifier-notary-inline, Component Type: verifier",
+      "artifactType": "application/vnd.cncf.notary.signature"
+    }
+  ]
+} component-type=server go.version=go1.23.3 namespace= trace-id=44b20cec-8901-4cd5-8d0e-3c2cfd0174da
+time=2026-02-21T10:45:17.470106143Z level=info msg=verifying subject ghcr.io/deislabs/ratify/notary-image@sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b component-type=server go.version=go1.23.3 namespace= trace-id=ff1d6cd8-e423-4e85-8cf6-19484390dfb4
+time=2026-02-21T10:45:17.726024505Z level=info msg=Resolve of the image completed successfully the digest is sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b component-type=executor go.version=go1.23.3 namespace= trace-id=ff1d6cd8-e423-4e85-8cf6-19484390dfb4
+time=2026-02-21T10:45:18.48128676Z level=info msg=Trust policy configuration: &{Name:default RegistryScopes:[*] SignatureVerification:{VerificationLevel:strict Override:map[]} TrustStores:[ca:certs] TrustedIdentities:[*]} component-type=verifier go.version=go1.23.3 namespace= trace-id=ff1d6cd8-e423-4e85-8cf6-19484390dfb4
+time=2026-02-21T10:45:18.481594894Z level=warning msg=unable to fetch certificates for Key Management Provider certstore-inline: failed to access non-existent key management provider: certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=ff1d6cd8-e423-4e85-8cf6-19484390dfb4
+time=2026-02-21T10:45:18.481609297Z level=warning msg=no certificate fetched for Key Management Provider certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=ff1d6cd8-e423-4e85-8cf6-19484390dfb4
+time=2026-02-21T10:45:18.481618949Z level=warning msg=unable to fetch certificates for Certificate Store certstore-inline: failed to access non-existent certificate store: certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=ff1d6cd8-e423-4e85-8cf6-19484390dfb4
+time=2026-02-21T10:45:18.481625079Z level=warning msg=no certificate fetched for Certificate Store certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=ff1d6cd8-e423-4e85-8cf6-19484390dfb4
+time=2026-02-21T10:45:18.481635213Z level=error msg=authenticity validation failed. Failure reason: unable to fetch certificates for namedStore: certs component-type=verifier go.version=go1.23.3 namespace= trace-id=ff1d6cd8-e423-4e85-8cf6-19484390dfb4
+time=2026-02-21T10:45:18.48170401Z level=info msg=verify result for subject ghcr.io/deislabs/ratify/notary-image@sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b: {
+  "verifierReports": [
+    {
+      "isSuccess": false,
+      "name": "verifier-notary-inline",
+      "type": "notation",
+      "message": "Original Error: (Original Error: (unable to fetch certificates for namedStore: certs), Error: verify plugin failure, Code: VERIFY_PLUGIN_FAILURE, Plugin Name: verifier-notary-inline, Component Type: verifier, Documentation: https://ratify.dev/docs/troubleshoot/verifier/notation, Detail: failed to verify signature of digest), Error: verify reference failure, Code: VERIFY_REFERENCE_FAILURE, Plugin Name: verifier-notary-inline, Component Type: verifier",
+      "artifactType": "application/vnd.cncf.notary.signature"
+    }
+  ]
+} component-type=server go.version=go1.23.3 namespace= trace-id=ff1d6cd8-e423-4e85-8cf6-19484390dfb4
+time=2026-02-21T10:45:18.496526342Z level=info msg=verifying subject ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4 component-type=server go.version=go1.23.3 namespace= trace-id=7dc3f083-39e7-4bbb-95fc-b0526fcb614d
+time=2026-02-21T10:45:18.725557842Z level=info msg=Resolve of the image completed successfully the digest is sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4 component-type=executor go.version=go1.23.3 namespace= trace-id=7dc3f083-39e7-4bbb-95fc-b0526fcb614d
+time=2026-02-21T10:45:19.057955745Z level=info msg=verify result for subject ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4: {
+  "verifierReports": [
+    {
+      "subject": "ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4",
+      "isSuccess": false,
+      "message": "verification failed: Error: no verifier report, Code: NO_VERIFIER_REPORT, Component Type: executor, Description: No verifier report was generated. This might be due to various factors, such as lack of artifacts attached to the image, a misconfiguration in the Referrer Store preventing access to the registry, or the absence of appropriate verifiers corresponding to the referenced image artifacts."
+    }
+  ]
+} component-type=server go.version=go1.23.3 namespace= trace-id=7dc3f083-39e7-4bbb-95fc-b0526fcb614d
+time=2026-02-21T10:49:16.416313357Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T10:49:16.427195652Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=50f1a632-48dc-49a4-9ca8-2de52cf324f7
+time=2026-02-21T10:55:17.482786694Z level=info msg=verifying subject ghcr.io/deislabs/ratify/notary-image@sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b component-type=server go.version=go1.23.3 namespace= trace-id=ddb09ac2-a900-4b0c-bd8e-1e2b0295999f
+time=2026-02-21T10:55:17.718085398Z level=info msg=Resolve of the image completed successfully the digest is sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b component-type=executor go.version=go1.23.3 namespace= trace-id=ddb09ac2-a900-4b0c-bd8e-1e2b0295999f
+time=2026-02-21T10:55:18.526730988Z level=info msg=Trust policy configuration: &{Name:default RegistryScopes:[*] SignatureVerification:{VerificationLevel:strict Override:map[]} TrustStores:[ca:certs] TrustedIdentities:[*]} component-type=verifier go.version=go1.23.3 namespace= trace-id=ddb09ac2-a900-4b0c-bd8e-1e2b0295999f
+time=2026-02-21T10:55:18.527021096Z level=warning msg=unable to fetch certificates for Key Management Provider certstore-inline: failed to access non-existent key management provider: certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=ddb09ac2-a900-4b0c-bd8e-1e2b0295999f
+time=2026-02-21T10:55:18.527033584Z level=warning msg=no certificate fetched for Key Management Provider certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=ddb09ac2-a900-4b0c-bd8e-1e2b0295999f
+time=2026-02-21T10:55:18.527042682Z level=warning msg=unable to fetch certificates for Certificate Store certstore-inline: failed to access non-existent certificate store: certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=ddb09ac2-a900-4b0c-bd8e-1e2b0295999f
+time=2026-02-21T10:55:18.527048984Z level=warning msg=no certificate fetched for Certificate Store certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=ddb09ac2-a900-4b0c-bd8e-1e2b0295999f
+time=2026-02-21T10:55:18.527055707Z level=error msg=authenticity validation failed. Failure reason: unable to fetch certificates for namedStore: certs component-type=verifier go.version=go1.23.3 namespace= trace-id=ddb09ac2-a900-4b0c-bd8e-1e2b0295999f
+time=2026-02-21T10:55:18.527112946Z level=info msg=verify result for subject ghcr.io/deislabs/ratify/notary-image@sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b: {
+  "verifierReports": [
+    {
+      "isSuccess": false,
+      "name": "verifier-notary-inline",
+      "type": "notation",
+      "message": "Original Error: (Original Error: (unable to fetch certificates for namedStore: certs), Error: verify plugin failure, Code: VERIFY_PLUGIN_FAILURE, Plugin Name: verifier-notary-inline, Component Type: verifier, Documentation: https://ratify.dev/docs/troubleshoot/verifier/notation, Detail: failed to verify signature of digest), Error: verify reference failure, Code: VERIFY_REFERENCE_FAILURE, Plugin Name: verifier-notary-inline, Component Type: verifier",
+      "artifactType": "application/vnd.cncf.notary.signature"
+    }
+  ]
+} component-type=server go.version=go1.23.3 namespace= trace-id=ddb09ac2-a900-4b0c-bd8e-1e2b0295999f
+time=2026-02-21T10:55:18.542248981Z level=info msg=verifying subject ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4 component-type=server go.version=go1.23.3 namespace= trace-id=cd2e4ecd-e443-4a77-8b0f-5d242f8dad8e
+time=2026-02-21T10:55:18.791346021Z level=info msg=Resolve of the image completed successfully the digest is sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4 component-type=executor go.version=go1.23.3 namespace= trace-id=cd2e4ecd-e443-4a77-8b0f-5d242f8dad8e
+time=2026-02-21T10:55:19.112352835Z level=info msg=verify result for subject ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4: {
+  "verifierReports": [
+    {
+      "subject": "ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4",
+      "isSuccess": false,
+      "message": "verification failed: Error: no verifier report, Code: NO_VERIFIER_REPORT, Component Type: executor, Description: No verifier report was generated. This might be due to various factors, such as lack of artifacts attached to the image, a misconfiguration in the Referrer Store preventing access to the registry, or the absence of appropriate verifiers corresponding to the referenced image artifacts."
+    }
+  ]
+} component-type=server go.version=go1.23.3 namespace= trace-id=cd2e4ecd-e443-4a77-8b0f-5d242f8dad8e
+time=2026-02-21T11:05:17.447155819Z level=info msg=verifying subject ghcr.io/deislabs/ratify/notary-image@sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b component-type=server go.version=go1.23.3 namespace= trace-id=e07cf98d-e100-40ba-b072-161b13830547
+time=2026-02-21T11:05:17.696931351Z level=info msg=Resolve of the image completed successfully the digest is sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b component-type=executor go.version=go1.23.3 namespace= trace-id=e07cf98d-e100-40ba-b072-161b13830547
+time=2026-02-21T11:05:18.650182184Z level=info msg=Trust policy configuration: &{Name:default RegistryScopes:[*] SignatureVerification:{VerificationLevel:strict Override:map[]} TrustStores:[ca:certs] TrustedIdentities:[*]} component-type=verifier go.version=go1.23.3 namespace= trace-id=e07cf98d-e100-40ba-b072-161b13830547
+time=2026-02-21T11:05:18.650452754Z level=warning msg=unable to fetch certificates for Key Management Provider certstore-inline: failed to access non-existent key management provider: certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=e07cf98d-e100-40ba-b072-161b13830547
+time=2026-02-21T11:05:18.650464669Z level=warning msg=no certificate fetched for Key Management Provider certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=e07cf98d-e100-40ba-b072-161b13830547
+time=2026-02-21T11:05:18.650473597Z level=warning msg=unable to fetch certificates for Certificate Store certstore-inline: failed to access non-existent certificate store: certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=e07cf98d-e100-40ba-b072-161b13830547
+time=2026-02-21T11:05:18.650479826Z level=warning msg=no certificate fetched for Certificate Store certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=e07cf98d-e100-40ba-b072-161b13830547
+time=2026-02-21T11:05:18.650486906Z level=error msg=authenticity validation failed. Failure reason: unable to fetch certificates for namedStore: certs component-type=verifier go.version=go1.23.3 namespace= trace-id=e07cf98d-e100-40ba-b072-161b13830547
+time=2026-02-21T11:05:18.650575485Z level=info msg=verify result for subject ghcr.io/deislabs/ratify/notary-image@sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b: {
+  "verifierReports": [
+    {
+      "isSuccess": false,
+      "name": "verifier-notary-inline",
+      "type": "notation",
+      "message": "Original Error: (Original Error: (unable to fetch certificates for namedStore: certs), Error: verify plugin failure, Code: VERIFY_PLUGIN_FAILURE, Plugin Name: verifier-notary-inline, Component Type: verifier, Documentation: https://ratify.dev/docs/troubleshoot/verifier/notation, Detail: failed to verify signature of digest), Error: verify reference failure, Code: VERIFY_REFERENCE_FAILURE, Plugin Name: verifier-notary-inline, Component Type: verifier",
+      "artifactType": "application/vnd.cncf.notary.signature"
+    }
+  ]
+} component-type=server go.version=go1.23.3 namespace= trace-id=e07cf98d-e100-40ba-b072-161b13830547
+time=2026-02-21T11:05:18.666415602Z level=info msg=verifying subject ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4 component-type=server go.version=go1.23.3 namespace= trace-id=f220aefc-bb39-4ed6-980c-9f556f940ae8
+time=2026-02-21T11:05:18.87291737Z level=info msg=Resolve of the image completed successfully the digest is sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4 component-type=executor go.version=go1.23.3 namespace= trace-id=f220aefc-bb39-4ed6-980c-9f556f940ae8
+time=2026-02-21T11:05:19.211473224Z level=info msg=verify result for subject ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4: {
+  "verifierReports": [
+    {
+      "subject": "ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4",
+      "isSuccess": false,
+      "message": "verification failed: Error: no verifier report, Code: NO_VERIFIER_REPORT, Component Type: executor, Description: No verifier report was generated. This might be due to various factors, such as lack of artifacts attached to the image, a misconfiguration in the Referrer Store preventing access to the registry, or the absence of appropriate verifiers corresponding to the referenced image artifacts."
+    }
+  ]
+} component-type=server go.version=go1.23.3 namespace= trace-id=f220aefc-bb39-4ed6-980c-9f556f940ae8
+time=2026-02-21T11:05:56.427698855Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T11:05:56.438195842Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=c49d0075-64a6-4c8e-ae20-a7dd95a6bb38
+time=2026-02-21T11:15:17.461728167Z level=info msg=verifying subject ghcr.io/deislabs/ratify/notary-image@sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b component-type=server go.version=go1.23.3 namespace= trace-id=0dccac7d-2682-49b0-b952-663cc7bc79f3
+time=2026-02-21T11:15:17.699816166Z level=info msg=Resolve of the image completed successfully the digest is sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b component-type=executor go.version=go1.23.3 namespace= trace-id=0dccac7d-2682-49b0-b952-663cc7bc79f3
+time=2026-02-21T11:15:18.587037922Z level=info msg=Trust policy configuration: &{Name:default RegistryScopes:[*] SignatureVerification:{VerificationLevel:strict Override:map[]} TrustStores:[ca:certs] TrustedIdentities:[*]} component-type=verifier go.version=go1.23.3 namespace= trace-id=0dccac7d-2682-49b0-b952-663cc7bc79f3
+time=2026-02-21T11:15:18.587340773Z level=warning msg=unable to fetch certificates for Key Management Provider certstore-inline: failed to access non-existent key management provider: certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=0dccac7d-2682-49b0-b952-663cc7bc79f3
+time=2026-02-21T11:15:18.587355147Z level=warning msg=no certificate fetched for Key Management Provider certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=0dccac7d-2682-49b0-b952-663cc7bc79f3
+time=2026-02-21T11:15:18.587365713Z level=warning msg=unable to fetch certificates for Certificate Store certstore-inline: failed to access non-existent certificate store: certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=0dccac7d-2682-49b0-b952-663cc7bc79f3
+time=2026-02-21T11:15:18.587372751Z level=warning msg=no certificate fetched for Certificate Store certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=0dccac7d-2682-49b0-b952-663cc7bc79f3
+time=2026-02-21T11:15:18.587382249Z level=error msg=authenticity validation failed. Failure reason: unable to fetch certificates for namedStore: certs component-type=verifier go.version=go1.23.3 namespace= trace-id=0dccac7d-2682-49b0-b952-663cc7bc79f3
+time=2026-02-21T11:15:18.587475134Z level=info msg=verify result for subject ghcr.io/deislabs/ratify/notary-image@sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b: {
+  "verifierReports": [
+    {
+      "isSuccess": false,
+      "name": "verifier-notary-inline",
+      "type": "notation",
+      "message": "Original Error: (Original Error: (unable to fetch certificates for namedStore: certs), Error: verify plugin failure, Code: VERIFY_PLUGIN_FAILURE, Plugin Name: verifier-notary-inline, Component Type: verifier, Documentation: https://ratify.dev/docs/troubleshoot/verifier/notation, Detail: failed to verify signature of digest), Error: verify reference failure, Code: VERIFY_REFERENCE_FAILURE, Plugin Name: verifier-notary-inline, Component Type: verifier",
+      "artifactType": "application/vnd.cncf.notary.signature"
+    }
+  ]
+} component-type=server go.version=go1.23.3 namespace= trace-id=0dccac7d-2682-49b0-b952-663cc7bc79f3
+time=2026-02-21T11:15:18.601969165Z level=info msg=verifying subject ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4 component-type=server go.version=go1.23.3 namespace= trace-id=d3fddc2b-610c-4da7-98eb-a98b8269c2a6
+time=2026-02-21T11:15:18.859671585Z level=info msg=Resolve of the image completed successfully the digest is sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4 component-type=executor go.version=go1.23.3 namespace= trace-id=d3fddc2b-610c-4da7-98eb-a98b8269c2a6
+time=2026-02-21T11:15:19.165696094Z level=info msg=verify result for subject ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4: {
+  "verifierReports": [
+    {
+      "subject": "ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4",
+      "isSuccess": false,
+      "message": "verification failed: Error: no verifier report, Code: NO_VERIFIER_REPORT, Component Type: executor, Description: No verifier report was generated. This might be due to various factors, such as lack of artifacts attached to the image, a misconfiguration in the Referrer Store preventing access to the registry, or the absence of appropriate verifiers corresponding to the referenced image artifacts."
+    }
+  ]
+} component-type=server go.version=go1.23.3 namespace= trace-id=d3fddc2b-610c-4da7-98eb-a98b8269c2a6
+time=2026-02-21T11:22:36.439088502Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T11:22:36.449066133Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=aeee0323-d507-45d6-96e2-e41dafeeda2f
+time=2026-02-21T11:25:17.431827579Z level=info msg=verifying subject ghcr.io/deislabs/ratify/notary-image@sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b component-type=server go.version=go1.23.3 namespace= trace-id=7a2b3d6e-90f7-458e-b00f-f88ff850cdbf
+time=2026-02-21T11:25:17.674756796Z level=info msg=Resolve of the image completed successfully the digest is sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b component-type=executor go.version=go1.23.3 namespace= trace-id=7a2b3d6e-90f7-458e-b00f-f88ff850cdbf
+time=2026-02-21T11:25:18.595260504Z level=info msg=Trust policy configuration: &{Name:default RegistryScopes:[*] SignatureVerification:{VerificationLevel:strict Override:map[]} TrustStores:[ca:certs] TrustedIdentities:[*]} component-type=verifier go.version=go1.23.3 namespace= trace-id=7a2b3d6e-90f7-458e-b00f-f88ff850cdbf
+time=2026-02-21T11:25:18.595558045Z level=warning msg=unable to fetch certificates for Key Management Provider certstore-inline: failed to access non-existent key management provider: certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=7a2b3d6e-90f7-458e-b00f-f88ff850cdbf
+time=2026-02-21T11:25:18.595572809Z level=warning msg=no certificate fetched for Key Management Provider certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=7a2b3d6e-90f7-458e-b00f-f88ff850cdbf
+time=2026-02-21T11:25:18.595590308Z level=warning msg=unable to fetch certificates for Certificate Store certstore-inline: failed to access non-existent certificate store: certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=7a2b3d6e-90f7-458e-b00f-f88ff850cdbf
+time=2026-02-21T11:25:18.59560411Z level=warning msg=no certificate fetched for Certificate Store certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=7a2b3d6e-90f7-458e-b00f-f88ff850cdbf
+time=2026-02-21T11:25:18.595613966Z level=error msg=authenticity validation failed. Failure reason: unable to fetch certificates for namedStore: certs component-type=verifier go.version=go1.23.3 namespace= trace-id=7a2b3d6e-90f7-458e-b00f-f88ff850cdbf
+time=2026-02-21T11:25:18.595706878Z level=info msg=verify result for subject ghcr.io/deislabs/ratify/notary-image@sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b: {
+  "verifierReports": [
+    {
+      "isSuccess": false,
+      "name": "verifier-notary-inline",
+      "type": "notation",
+      "message": "Original Error: (Original Error: (unable to fetch certificates for namedStore: certs), Error: verify plugin failure, Code: VERIFY_PLUGIN_FAILURE, Plugin Name: verifier-notary-inline, Component Type: verifier, Documentation: https://ratify.dev/docs/troubleshoot/verifier/notation, Detail: failed to verify signature of digest), Error: verify reference failure, Code: VERIFY_REFERENCE_FAILURE, Plugin Name: verifier-notary-inline, Component Type: verifier",
+      "artifactType": "application/vnd.cncf.notary.signature"
+    }
+  ]
+} component-type=server go.version=go1.23.3 namespace= trace-id=7a2b3d6e-90f7-458e-b00f-f88ff850cdbf
+time=2026-02-21T11:25:18.611922877Z level=info msg=verifying subject ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4 component-type=server go.version=go1.23.3 namespace= trace-id=efcbba26-57e1-49f2-9610-3da87916e7e0
+time=2026-02-21T11:25:18.832483454Z level=info msg=Resolve of the image completed successfully the digest is sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4 component-type=executor go.version=go1.23.3 namespace= trace-id=efcbba26-57e1-49f2-9610-3da87916e7e0
+time=2026-02-21T11:25:19.142754593Z level=info msg=verify result for subject ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4: {
+  "verifierReports": [
+    {
+      "subject": "ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4",
+      "isSuccess": false,
+      "message": "verification failed: Error: no verifier report, Code: NO_VERIFIER_REPORT, Component Type: executor, Description: No verifier report was generated. This might be due to various factors, such as lack of artifacts attached to the image, a misconfiguration in the Referrer Store preventing access to the registry, or the absence of appropriate verifiers corresponding to the referenced image artifacts."
+    }
+  ]
+} component-type=server go.version=go1.23.3 namespace= trace-id=efcbba26-57e1-49f2-9610-3da87916e7e0
+time=2026-02-21T11:35:17.458770237Z level=info msg=verifying subject ghcr.io/deislabs/ratify/notary-image@sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b component-type=server go.version=go1.23.3 namespace= trace-id=222aae47-7a12-45d0-bc80-dbcc73194a22
+time=2026-02-21T11:35:17.772500757Z level=info msg=Resolve of the image completed successfully the digest is sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b component-type=executor go.version=go1.23.3 namespace= trace-id=222aae47-7a12-45d0-bc80-dbcc73194a22
+time=2026-02-21T11:35:18.603277893Z level=info msg=Trust policy configuration: &{Name:default RegistryScopes:[*] SignatureVerification:{VerificationLevel:strict Override:map[]} TrustStores:[ca:certs] TrustedIdentities:[*]} component-type=verifier go.version=go1.23.3 namespace= trace-id=222aae47-7a12-45d0-bc80-dbcc73194a22
+time=2026-02-21T11:35:18.603577184Z level=warning msg=unable to fetch certificates for Key Management Provider certstore-inline: failed to access non-existent key management provider: certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=222aae47-7a12-45d0-bc80-dbcc73194a22
+time=2026-02-21T11:35:18.603591067Z level=warning msg=no certificate fetched for Key Management Provider certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=222aae47-7a12-45d0-bc80-dbcc73194a22
+time=2026-02-21T11:35:18.603600563Z level=warning msg=unable to fetch certificates for Certificate Store certstore-inline: failed to access non-existent certificate store: certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=222aae47-7a12-45d0-bc80-dbcc73194a22
+time=2026-02-21T11:35:18.603607228Z level=warning msg=no certificate fetched for Certificate Store certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=222aae47-7a12-45d0-bc80-dbcc73194a22
+time=2026-02-21T11:35:18.603613339Z level=error msg=authenticity validation failed. Failure reason: unable to fetch certificates for namedStore: certs component-type=verifier go.version=go1.23.3 namespace= trace-id=222aae47-7a12-45d0-bc80-dbcc73194a22
+time=2026-02-21T11:35:18.603683367Z level=info msg=verify result for subject ghcr.io/deislabs/ratify/notary-image@sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b: {
+  "verifierReports": [
+    {
+      "isSuccess": false,
+      "name": "verifier-notary-inline",
+      "type": "notation",
+      "message": "Original Error: (Original Error: (unable to fetch certificates for namedStore: certs), Error: verify plugin failure, Code: VERIFY_PLUGIN_FAILURE, Plugin Name: verifier-notary-inline, Component Type: verifier, Documentation: https://ratify.dev/docs/troubleshoot/verifier/notation, Detail: failed to verify signature of digest), Error: verify reference failure, Code: VERIFY_REFERENCE_FAILURE, Plugin Name: verifier-notary-inline, Component Type: verifier",
+      "artifactType": "application/vnd.cncf.notary.signature"
+    }
+  ]
+} component-type=server go.version=go1.23.3 namespace= trace-id=222aae47-7a12-45d0-bc80-dbcc73194a22
+time=2026-02-21T11:35:18.620184534Z level=info msg=verifying subject ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4 component-type=server go.version=go1.23.3 namespace= trace-id=46d45b4c-cf91-48bd-bc65-bfe88d267925
+time=2026-02-21T11:35:18.885350529Z level=info msg=Resolve of the image completed successfully the digest is sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4 component-type=executor go.version=go1.23.3 namespace= trace-id=46d45b4c-cf91-48bd-bc65-bfe88d267925
+time=2026-02-21T11:35:19.192614494Z level=info msg=verify result for subject ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4: {
+  "verifierReports": [
+    {
+      "subject": "ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4",
+      "isSuccess": false,
+      "message": "verification failed: Error: no verifier report, Code: NO_VERIFIER_REPORT, Component Type: executor, Description: No verifier report was generated. This might be due to various factors, such as lack of artifacts attached to the image, a misconfiguration in the Referrer Store preventing access to the registry, or the absence of appropriate verifiers corresponding to the referenced image artifacts."
+    }
+  ]
+} component-type=server go.version=go1.23.3 namespace= trace-id=46d45b4c-cf91-48bd-bc65-bfe88d267925
+time=2026-02-21T11:39:16.449267996Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T11:39:16.459722893Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=07c87e64-cf72-40b2-9991-27f6c503f12e
+time=2026-02-21T11:45:17.475033116Z level=info msg=verifying subject ghcr.io/deislabs/ratify/notary-image@sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b component-type=server go.version=go1.23.3 namespace= trace-id=b9ffaf6f-35b5-4012-83a5-9cd3d54502c9
+time=2026-02-21T11:45:17.723230703Z level=info msg=Resolve of the image completed successfully the digest is sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b component-type=executor go.version=go1.23.3 namespace= trace-id=b9ffaf6f-35b5-4012-83a5-9cd3d54502c9
+time=2026-02-21T11:45:18.510995359Z level=info msg=Trust policy configuration: &{Name:default RegistryScopes:[*] SignatureVerification:{VerificationLevel:strict Override:map[]} TrustStores:[ca:certs] TrustedIdentities:[*]} component-type=verifier go.version=go1.23.3 namespace= trace-id=b9ffaf6f-35b5-4012-83a5-9cd3d54502c9
+time=2026-02-21T11:45:18.511267052Z level=warning msg=unable to fetch certificates for Key Management Provider certstore-inline: failed to access non-existent key management provider: certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=b9ffaf6f-35b5-4012-83a5-9cd3d54502c9
+time=2026-02-21T11:45:18.511279833Z level=warning msg=no certificate fetched for Key Management Provider certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=b9ffaf6f-35b5-4012-83a5-9cd3d54502c9
+time=2026-02-21T11:45:18.511289973Z level=warning msg=unable to fetch certificates for Certificate Store certstore-inline: failed to access non-existent certificate store: certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=b9ffaf6f-35b5-4012-83a5-9cd3d54502c9
+time=2026-02-21T11:45:18.511296128Z level=warning msg=no certificate fetched for Certificate Store certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=b9ffaf6f-35b5-4012-83a5-9cd3d54502c9
+time=2026-02-21T11:45:18.511302256Z level=error msg=authenticity validation failed. Failure reason: unable to fetch certificates for namedStore: certs component-type=verifier go.version=go1.23.3 namespace= trace-id=b9ffaf6f-35b5-4012-83a5-9cd3d54502c9
+time=2026-02-21T11:45:18.511367018Z level=info msg=verify result for subject ghcr.io/deislabs/ratify/notary-image@sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b: {
+  "verifierReports": [
+    {
+      "isSuccess": false,
+      "name": "verifier-notary-inline",
+      "type": "notation",
+      "message": "Original Error: (Original Error: (unable to fetch certificates for namedStore: certs), Error: verify plugin failure, Code: VERIFY_PLUGIN_FAILURE, Plugin Name: verifier-notary-inline, Component Type: verifier, Documentation: https://ratify.dev/docs/troubleshoot/verifier/notation, Detail: failed to verify signature of digest), Error: verify reference failure, Code: VERIFY_REFERENCE_FAILURE, Plugin Name: verifier-notary-inline, Component Type: verifier",
+      "artifactType": "application/vnd.cncf.notary.signature"
+    }
+  ]
+} component-type=server go.version=go1.23.3 namespace= trace-id=b9ffaf6f-35b5-4012-83a5-9cd3d54502c9
+time=2026-02-21T11:45:18.525435116Z level=info msg=verifying subject ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4 component-type=server go.version=go1.23.3 namespace= trace-id=064a7f36-1021-4b4d-92b8-e7579a9c996a
+time=2026-02-21T11:45:18.730111241Z level=info msg=Resolve of the image completed successfully the digest is sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4 component-type=executor go.version=go1.23.3 namespace= trace-id=064a7f36-1021-4b4d-92b8-e7579a9c996a
+time=2026-02-21T11:45:19.082163789Z level=info msg=verify result for subject ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4: {
+  "verifierReports": [
+    {
+      "subject": "ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4",
+      "isSuccess": false,
+      "message": "verification failed: Error: no verifier report, Code: NO_VERIFIER_REPORT, Component Type: executor, Description: No verifier report was generated. This might be due to various factors, such as lack of artifacts attached to the image, a misconfiguration in the Referrer Store preventing access to the registry, or the absence of appropriate verifiers corresponding to the referenced image artifacts."
+    }
+  ]
+} component-type=server go.version=go1.23.3 namespace= trace-id=064a7f36-1021-4b4d-92b8-e7579a9c996a
+time=2026-02-21T11:55:17.5006508Z level=info msg=verifying subject ghcr.io/deislabs/ratify/notary-image@sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b component-type=server go.version=go1.23.3 namespace= trace-id=807b0bbd-4874-4266-adb1-f2c716bc605e
+time=2026-02-21T11:55:17.804159724Z level=info msg=Resolve of the image completed successfully the digest is sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b component-type=executor go.version=go1.23.3 namespace= trace-id=807b0bbd-4874-4266-adb1-f2c716bc605e
+time=2026-02-21T11:55:18.619126646Z level=info msg=Trust policy configuration: &{Name:default RegistryScopes:[*] SignatureVerification:{VerificationLevel:strict Override:map[]} TrustStores:[ca:certs] TrustedIdentities:[*]} component-type=verifier go.version=go1.23.3 namespace= trace-id=807b0bbd-4874-4266-adb1-f2c716bc605e
+time=2026-02-21T11:55:18.619429002Z level=warning msg=unable to fetch certificates for Key Management Provider certstore-inline: failed to access non-existent key management provider: certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=807b0bbd-4874-4266-adb1-f2c716bc605e
+time=2026-02-21T11:55:18.619443175Z level=warning msg=no certificate fetched for Key Management Provider certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=807b0bbd-4874-4266-adb1-f2c716bc605e
+time=2026-02-21T11:55:18.619452571Z level=warning msg=unable to fetch certificates for Certificate Store certstore-inline: failed to access non-existent certificate store: certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=807b0bbd-4874-4266-adb1-f2c716bc605e
+time=2026-02-21T11:55:18.61946371Z level=warning msg=no certificate fetched for Certificate Store certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=807b0bbd-4874-4266-adb1-f2c716bc605e
+time=2026-02-21T11:55:18.619476998Z level=error msg=authenticity validation failed. Failure reason: unable to fetch certificates for namedStore: certs component-type=verifier go.version=go1.23.3 namespace= trace-id=807b0bbd-4874-4266-adb1-f2c716bc605e
+time=2026-02-21T11:55:18.619568857Z level=info msg=verify result for subject ghcr.io/deislabs/ratify/notary-image@sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b: {
+  "verifierReports": [
+    {
+      "isSuccess": false,
+      "name": "verifier-notary-inline",
+      "type": "notation",
+      "message": "Original Error: (Original Error: (unable to fetch certificates for namedStore: certs), Error: verify plugin failure, Code: VERIFY_PLUGIN_FAILURE, Plugin Name: verifier-notary-inline, Component Type: verifier, Documentation: https://ratify.dev/docs/troubleshoot/verifier/notation, Detail: failed to verify signature of digest), Error: verify reference failure, Code: VERIFY_REFERENCE_FAILURE, Plugin Name: verifier-notary-inline, Component Type: verifier",
+      "artifactType": "application/vnd.cncf.notary.signature"
+    }
+  ]
+} component-type=server go.version=go1.23.3 namespace= trace-id=807b0bbd-4874-4266-adb1-f2c716bc605e
+time=2026-02-21T11:55:18.63686334Z level=info msg=verifying subject ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4 component-type=server go.version=go1.23.3 namespace= trace-id=2028ddec-ee5e-4eb5-978a-5bcf7877fdfb
+time=2026-02-21T11:55:18.901052334Z level=info msg=Resolve of the image completed successfully the digest is sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4 component-type=executor go.version=go1.23.3 namespace= trace-id=2028ddec-ee5e-4eb5-978a-5bcf7877fdfb
+time=2026-02-21T11:55:19.237882004Z level=info msg=verify result for subject ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4: {
+  "verifierReports": [
+    {
+      "subject": "ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4",
+      "isSuccess": false,
+      "message": "verification failed: Error: no verifier report, Code: NO_VERIFIER_REPORT, Component Type: executor, Description: No verifier report was generated. This might be due to various factors, such as lack of artifacts attached to the image, a misconfiguration in the Referrer Store preventing access to the registry, or the absence of appropriate verifiers corresponding to the referenced image artifacts."
+    }
+  ]
+} component-type=server go.version=go1.23.3 namespace= trace-id=2028ddec-ee5e-4eb5-978a-5bcf7877fdfb
+time=2026-02-21T11:55:56.459787819Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T11:55:56.469180934Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=fcf40a9e-206c-4dcc-a457-46ee40c6cf0c
+time=2026-02-21T12:05:17.448810408Z level=info msg=verifying subject ghcr.io/deislabs/ratify/notary-image@sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b component-type=server go.version=go1.23.3 namespace= trace-id=edad9e8b-dfdd-4b7e-9332-571f3b6ee6a5
+time=2026-02-21T12:05:17.8350157Z level=info msg=Resolve of the image completed successfully the digest is sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b component-type=executor go.version=go1.23.3 namespace= trace-id=edad9e8b-dfdd-4b7e-9332-571f3b6ee6a5
+time=2026-02-21T12:05:18.605550603Z level=info msg=Trust policy configuration: &{Name:default RegistryScopes:[*] SignatureVerification:{VerificationLevel:strict Override:map[]} TrustStores:[ca:certs] TrustedIdentities:[*]} component-type=verifier go.version=go1.23.3 namespace= trace-id=edad9e8b-dfdd-4b7e-9332-571f3b6ee6a5
+time=2026-02-21T12:05:18.60584283Z level=warning msg=unable to fetch certificates for Key Management Provider certstore-inline: failed to access non-existent key management provider: certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=edad9e8b-dfdd-4b7e-9332-571f3b6ee6a5
+time=2026-02-21T12:05:18.605856247Z level=warning msg=no certificate fetched for Key Management Provider certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=edad9e8b-dfdd-4b7e-9332-571f3b6ee6a5
+time=2026-02-21T12:05:18.605865669Z level=warning msg=unable to fetch certificates for Certificate Store certstore-inline: failed to access non-existent certificate store: certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=edad9e8b-dfdd-4b7e-9332-571f3b6ee6a5
+time=2026-02-21T12:05:18.605873051Z level=warning msg=no certificate fetched for Certificate Store certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=edad9e8b-dfdd-4b7e-9332-571f3b6ee6a5
+time=2026-02-21T12:05:18.605883238Z level=error msg=authenticity validation failed. Failure reason: unable to fetch certificates for namedStore: certs component-type=verifier go.version=go1.23.3 namespace= trace-id=edad9e8b-dfdd-4b7e-9332-571f3b6ee6a5
+time=2026-02-21T12:05:18.605982693Z level=info msg=verify result for subject ghcr.io/deislabs/ratify/notary-image@sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b: {
+  "verifierReports": [
+    {
+      "isSuccess": false,
+      "name": "verifier-notary-inline",
+      "type": "notation",
+      "message": "Original Error: (Original Error: (unable to fetch certificates for namedStore: certs), Error: verify plugin failure, Code: VERIFY_PLUGIN_FAILURE, Plugin Name: verifier-notary-inline, Component Type: verifier, Documentation: https://ratify.dev/docs/troubleshoot/verifier/notation, Detail: failed to verify signature of digest), Error: verify reference failure, Code: VERIFY_REFERENCE_FAILURE, Plugin Name: verifier-notary-inline, Component Type: verifier",
+      "artifactType": "application/vnd.cncf.notary.signature"
+    }
+  ]
+} component-type=server go.version=go1.23.3 namespace= trace-id=edad9e8b-dfdd-4b7e-9332-571f3b6ee6a5
+time=2026-02-21T12:05:18.622476052Z level=info msg=verifying subject ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4 component-type=server go.version=go1.23.3 namespace= trace-id=47df9c69-eb49-49d1-b222-f8d2d3371775
+time=2026-02-21T12:05:18.981621363Z level=info msg=Resolve of the image completed successfully the digest is sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4 component-type=executor go.version=go1.23.3 namespace= trace-id=47df9c69-eb49-49d1-b222-f8d2d3371775
+time=2026-02-21T12:05:19.29221174Z level=info msg=verify result for subject ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4: {
+  "verifierReports": [
+    {
+      "subject": "ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4",
+      "isSuccess": false,
+      "message": "verification failed: Error: no verifier report, Code: NO_VERIFIER_REPORT, Component Type: executor, Description: No verifier report was generated. This might be due to various factors, such as lack of artifacts attached to the image, a misconfiguration in the Referrer Store preventing access to the registry, or the absence of appropriate verifiers corresponding to the referenced image artifacts."
+    }
+  ]
+} component-type=server go.version=go1.23.3 namespace= trace-id=47df9c69-eb49-49d1-b222-f8d2d3371775
+time=2026-02-21T12:12:36.469973409Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T12:12:36.48072514Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=d592c6b1-9910-4585-833b-08a81f2ef143
+time=2026-02-21T12:15:17.479322888Z level=info msg=verifying subject ghcr.io/deislabs/ratify/notary-image@sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b component-type=server go.version=go1.23.3 namespace= trace-id=c8972290-d04e-417a-970d-4271d95b9a10
+time=2026-02-21T12:15:17.720710363Z level=info msg=Resolve of the image completed successfully the digest is sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b component-type=executor go.version=go1.23.3 namespace= trace-id=c8972290-d04e-417a-970d-4271d95b9a10
+time=2026-02-21T12:15:18.5006909Z level=info msg=Trust policy configuration: &{Name:default RegistryScopes:[*] SignatureVerification:{VerificationLevel:strict Override:map[]} TrustStores:[ca:certs] TrustedIdentities:[*]} component-type=verifier go.version=go1.23.3 namespace= trace-id=c8972290-d04e-417a-970d-4271d95b9a10
+time=2026-02-21T12:15:18.500992361Z level=warning msg=unable to fetch certificates for Key Management Provider certstore-inline: failed to access non-existent key management provider: certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=c8972290-d04e-417a-970d-4271d95b9a10
+time=2026-02-21T12:15:18.501009638Z level=warning msg=no certificate fetched for Key Management Provider certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=c8972290-d04e-417a-970d-4271d95b9a10
+time=2026-02-21T12:15:18.501021366Z level=warning msg=unable to fetch certificates for Certificate Store certstore-inline: failed to access non-existent certificate store: certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=c8972290-d04e-417a-970d-4271d95b9a10
+time=2026-02-21T12:15:18.50102883Z level=warning msg=no certificate fetched for Certificate Store certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=c8972290-d04e-417a-970d-4271d95b9a10
+time=2026-02-21T12:15:18.501035201Z level=error msg=authenticity validation failed. Failure reason: unable to fetch certificates for namedStore: certs component-type=verifier go.version=go1.23.3 namespace= trace-id=c8972290-d04e-417a-970d-4271d95b9a10
+time=2026-02-21T12:15:18.501101729Z level=info msg=verify result for subject ghcr.io/deislabs/ratify/notary-image@sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b: {
+  "verifierReports": [
+    {
+      "isSuccess": false,
+      "name": "verifier-notary-inline",
+      "type": "notation",
+      "message": "Original Error: (Original Error: (unable to fetch certificates for namedStore: certs), Error: verify plugin failure, Code: VERIFY_PLUGIN_FAILURE, Plugin Name: verifier-notary-inline, Component Type: verifier, Documentation: https://ratify.dev/docs/troubleshoot/verifier/notation, Detail: failed to verify signature of digest), Error: verify reference failure, Code: VERIFY_REFERENCE_FAILURE, Plugin Name: verifier-notary-inline, Component Type: verifier",
+      "artifactType": "application/vnd.cncf.notary.signature"
+    }
+  ]
+} component-type=server go.version=go1.23.3 namespace= trace-id=c8972290-d04e-417a-970d-4271d95b9a10
+time=2026-02-21T12:15:18.51894054Z level=info msg=verifying subject ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4 component-type=server go.version=go1.23.3 namespace= trace-id=16d08c00-5ade-4a0e-a88f-0aecf7ab6cf6
+time=2026-02-21T12:15:18.770683141Z level=info msg=Resolve of the image completed successfully the digest is sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4 component-type=executor go.version=go1.23.3 namespace= trace-id=16d08c00-5ade-4a0e-a88f-0aecf7ab6cf6
+time=2026-02-21T12:15:19.048453215Z level=info msg=verify result for subject ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4: {
+  "verifierReports": [
+    {
+      "subject": "ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4",
+      "isSuccess": false,
+      "message": "verification failed: Error: no verifier report, Code: NO_VERIFIER_REPORT, Component Type: executor, Description: No verifier report was generated. This might be due to various factors, such as lack of artifacts attached to the image, a misconfiguration in the Referrer Store preventing access to the registry, or the absence of appropriate verifiers corresponding to the referenced image artifacts."
+    }
+  ]
+} component-type=server go.version=go1.23.3 namespace= trace-id=16d08c00-5ade-4a0e-a88f-0aecf7ab6cf6
+time=2026-02-21T12:25:17.467886825Z level=info msg=verifying subject ghcr.io/deislabs/ratify/notary-image@sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b component-type=server go.version=go1.23.3 namespace= trace-id=c3316524-8045-4795-a410-825021e0c33d
+time=2026-02-21T12:25:17.752666389Z level=info msg=Resolve of the image completed successfully the digest is sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b component-type=executor go.version=go1.23.3 namespace= trace-id=c3316524-8045-4795-a410-825021e0c33d
+time=2026-02-21T12:25:18.544781628Z level=info msg=Trust policy configuration: &{Name:default RegistryScopes:[*] SignatureVerification:{VerificationLevel:strict Override:map[]} TrustStores:[ca:certs] TrustedIdentities:[*]} component-type=verifier go.version=go1.23.3 namespace= trace-id=c3316524-8045-4795-a410-825021e0c33d
+time=2026-02-21T12:25:18.545120684Z level=warning msg=unable to fetch certificates for Key Management Provider certstore-inline: failed to access non-existent key management provider: certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=c3316524-8045-4795-a410-825021e0c33d
+time=2026-02-21T12:25:18.545134903Z level=warning msg=no certificate fetched for Key Management Provider certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=c3316524-8045-4795-a410-825021e0c33d
+time=2026-02-21T12:25:18.545144162Z level=warning msg=unable to fetch certificates for Certificate Store certstore-inline: failed to access non-existent certificate store: certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=c3316524-8045-4795-a410-825021e0c33d
+time=2026-02-21T12:25:18.545151883Z level=warning msg=no certificate fetched for Certificate Store certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=c3316524-8045-4795-a410-825021e0c33d
+time=2026-02-21T12:25:18.545161777Z level=error msg=authenticity validation failed. Failure reason: unable to fetch certificates for namedStore: certs component-type=verifier go.version=go1.23.3 namespace= trace-id=c3316524-8045-4795-a410-825021e0c33d
+time=2026-02-21T12:25:18.545240629Z level=info msg=verify result for subject ghcr.io/deislabs/ratify/notary-image@sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b: {
+  "verifierReports": [
+    {
+      "isSuccess": false,
+      "name": "verifier-notary-inline",
+      "type": "notation",
+      "message": "Original Error: (Original Error: (unable to fetch certificates for namedStore: certs), Error: verify plugin failure, Code: VERIFY_PLUGIN_FAILURE, Plugin Name: verifier-notary-inline, Component Type: verifier, Documentation: https://ratify.dev/docs/troubleshoot/verifier/notation, Detail: failed to verify signature of digest), Error: verify reference failure, Code: VERIFY_REFERENCE_FAILURE, Plugin Name: verifier-notary-inline, Component Type: verifier",
+      "artifactType": "application/vnd.cncf.notary.signature"
+    }
+  ]
+} component-type=server go.version=go1.23.3 namespace= trace-id=c3316524-8045-4795-a410-825021e0c33d
+time=2026-02-21T12:25:18.561193009Z level=info msg=verifying subject ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4 component-type=server go.version=go1.23.3 namespace= trace-id=7eb5869b-d16f-4352-acff-4112b60180a9
+time=2026-02-21T12:25:18.76309212Z level=info msg=Resolve of the image completed successfully the digest is sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4 component-type=executor go.version=go1.23.3 namespace= trace-id=7eb5869b-d16f-4352-acff-4112b60180a9
+time=2026-02-21T12:25:19.038680126Z level=info msg=verify result for subject ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4: {
+  "verifierReports": [
+    {
+      "subject": "ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4",
+      "isSuccess": false,
+      "message": "verification failed: Error: no verifier report, Code: NO_VERIFIER_REPORT, Component Type: executor, Description: No verifier report was generated. This might be due to various factors, such as lack of artifacts attached to the image, a misconfiguration in the Referrer Store preventing access to the registry, or the absence of appropriate verifiers corresponding to the referenced image artifacts."
+    }
+  ]
+} component-type=server go.version=go1.23.3 namespace= trace-id=7eb5869b-d16f-4352-acff-4112b60180a9
+time=2026-02-21T12:29:16.480977745Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T12:29:16.494903072Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=51ee08d4-26b3-4b4d-93b1-73fade9ecb18
+time=2026-02-21T12:35:17.429775929Z level=info msg=verifying subject ghcr.io/deislabs/ratify/notary-image@sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b component-type=server go.version=go1.23.3 namespace= trace-id=81c21048-be56-47d1-9978-4a37d6a7fd72
+time=2026-02-21T12:35:17.727535643Z level=info msg=Resolve of the image completed successfully the digest is sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b component-type=executor go.version=go1.23.3 namespace= trace-id=81c21048-be56-47d1-9978-4a37d6a7fd72
+time=2026-02-21T12:35:18.568566064Z level=info msg=Trust policy configuration: &{Name:default RegistryScopes:[*] SignatureVerification:{VerificationLevel:strict Override:map[]} TrustStores:[ca:certs] TrustedIdentities:[*]} component-type=verifier go.version=go1.23.3 namespace= trace-id=81c21048-be56-47d1-9978-4a37d6a7fd72
+time=2026-02-21T12:35:18.568897762Z level=warning msg=unable to fetch certificates for Key Management Provider certstore-inline: failed to access non-existent key management provider: certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=81c21048-be56-47d1-9978-4a37d6a7fd72
+time=2026-02-21T12:35:18.56891152Z level=warning msg=no certificate fetched for Key Management Provider certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=81c21048-be56-47d1-9978-4a37d6a7fd72
+time=2026-02-21T12:35:18.568920952Z level=warning msg=unable to fetch certificates for Certificate Store certstore-inline: failed to access non-existent certificate store: certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=81c21048-be56-47d1-9978-4a37d6a7fd72
+time=2026-02-21T12:35:18.568930186Z level=warning msg=no certificate fetched for Certificate Store certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=81c21048-be56-47d1-9978-4a37d6a7fd72
+time=2026-02-21T12:35:18.568941175Z level=error msg=authenticity validation failed. Failure reason: unable to fetch certificates for namedStore: certs component-type=verifier go.version=go1.23.3 namespace= trace-id=81c21048-be56-47d1-9978-4a37d6a7fd72
+time=2026-02-21T12:35:18.569025859Z level=info msg=verify result for subject ghcr.io/deislabs/ratify/notary-image@sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b: {
+  "verifierReports": [
+    {
+      "isSuccess": false,
+      "name": "verifier-notary-inline",
+      "type": "notation",
+      "message": "Original Error: (Original Error: (unable to fetch certificates for namedStore: certs), Error: verify plugin failure, Code: VERIFY_PLUGIN_FAILURE, Plugin Name: verifier-notary-inline, Component Type: verifier, Documentation: https://ratify.dev/docs/troubleshoot/verifier/notation, Detail: failed to verify signature of digest), Error: verify reference failure, Code: VERIFY_REFERENCE_FAILURE, Plugin Name: verifier-notary-inline, Component Type: verifier",
+      "artifactType": "application/vnd.cncf.notary.signature"
+    }
+  ]
+} component-type=server go.version=go1.23.3 namespace= trace-id=81c21048-be56-47d1-9978-4a37d6a7fd72
+time=2026-02-21T12:35:18.585187402Z level=info msg=verifying subject ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4 component-type=server go.version=go1.23.3 namespace= trace-id=66806786-0bd9-4427-b1a6-4fc934586df1
+time=2026-02-21T12:35:18.832992852Z level=info msg=Resolve of the image completed successfully the digest is sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4 component-type=executor go.version=go1.23.3 namespace= trace-id=66806786-0bd9-4427-b1a6-4fc934586df1
+time=2026-02-21T12:35:19.123809623Z level=info msg=verify result for subject ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4: {
+  "verifierReports": [
+    {
+      "subject": "ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4",
+      "isSuccess": false,
+      "message": "verification failed: Error: no verifier report, Code: NO_VERIFIER_REPORT, Component Type: executor, Description: No verifier report was generated. This might be due to various factors, such as lack of artifacts attached to the image, a misconfiguration in the Referrer Store preventing access to the registry, or the absence of appropriate verifiers corresponding to the referenced image artifacts."
+    }
+  ]
+} component-type=server go.version=go1.23.3 namespace= trace-id=66806786-0bd9-4427-b1a6-4fc934586df1
+time=2026-02-21T12:40:25.006613479Z level=info msg=[cert-rotation] no cert refresh needed name=cert-rotation
+time=2026-02-21T12:45:17.429398435Z level=info msg=verifying subject ghcr.io/deislabs/ratify/notary-image@sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b component-type=server go.version=go1.23.3 namespace= trace-id=5fcd91c4-cb21-4e94-b74e-b6ed4d071f16
+time=2026-02-21T12:45:17.720192313Z level=info msg=Resolve of the image completed successfully the digest is sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b component-type=executor go.version=go1.23.3 namespace= trace-id=5fcd91c4-cb21-4e94-b74e-b6ed4d071f16
+time=2026-02-21T12:45:18.45886726Z level=info msg=Trust policy configuration: &{Name:default RegistryScopes:[*] SignatureVerification:{VerificationLevel:strict Override:map[]} TrustStores:[ca:certs] TrustedIdentities:[*]} component-type=verifier go.version=go1.23.3 namespace= trace-id=5fcd91c4-cb21-4e94-b74e-b6ed4d071f16
+time=2026-02-21T12:45:18.459182759Z level=warning msg=unable to fetch certificates for Key Management Provider certstore-inline: failed to access non-existent key management provider: certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=5fcd91c4-cb21-4e94-b74e-b6ed4d071f16
+time=2026-02-21T12:45:18.459199149Z level=warning msg=no certificate fetched for Key Management Provider certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=5fcd91c4-cb21-4e94-b74e-b6ed4d071f16
+time=2026-02-21T12:45:18.459211927Z level=warning msg=unable to fetch certificates for Certificate Store certstore-inline: failed to access non-existent certificate store: certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=5fcd91c4-cb21-4e94-b74e-b6ed4d071f16
+time=2026-02-21T12:45:18.459221966Z level=warning msg=no certificate fetched for Certificate Store certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=5fcd91c4-cb21-4e94-b74e-b6ed4d071f16
+time=2026-02-21T12:45:18.459234193Z level=error msg=authenticity validation failed. Failure reason: unable to fetch certificates for namedStore: certs component-type=verifier go.version=go1.23.3 namespace= trace-id=5fcd91c4-cb21-4e94-b74e-b6ed4d071f16
+time=2026-02-21T12:45:18.459302929Z level=info msg=verify result for subject ghcr.io/deislabs/ratify/notary-image@sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b: {
+  "verifierReports": [
+    {
+      "isSuccess": false,
+      "name": "verifier-notary-inline",
+      "type": "notation",
+      "message": "Original Error: (Original Error: (unable to fetch certificates for namedStore: certs), Error: verify plugin failure, Code: VERIFY_PLUGIN_FAILURE, Plugin Name: verifier-notary-inline, Component Type: verifier, Documentation: https://ratify.dev/docs/troubleshoot/verifier/notation, Detail: failed to verify signature of digest), Error: verify reference failure, Code: VERIFY_REFERENCE_FAILURE, Plugin Name: verifier-notary-inline, Component Type: verifier",
+      "artifactType": "application/vnd.cncf.notary.signature"
+    }
+  ]
+} component-type=server go.version=go1.23.3 namespace= trace-id=5fcd91c4-cb21-4e94-b74e-b6ed4d071f16
+time=2026-02-21T12:45:18.477357499Z level=info msg=verifying subject ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4 component-type=server go.version=go1.23.3 namespace= trace-id=2b6ecca6-3fa5-4979-a856-b8a83b1ae62a
+time=2026-02-21T12:45:18.704658138Z level=info msg=Resolve of the image completed successfully the digest is sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4 component-type=executor go.version=go1.23.3 namespace= trace-id=2b6ecca6-3fa5-4979-a856-b8a83b1ae62a
+time=2026-02-21T12:45:19.011997144Z level=info msg=verify result for subject ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4: {
+  "verifierReports": [
+    {
+      "subject": "ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4",
+      "isSuccess": false,
+      "message": "verification failed: Error: no verifier report, Code: NO_VERIFIER_REPORT, Component Type: executor, Description: No verifier report was generated. This might be due to various factors, such as lack of artifacts attached to the image, a misconfiguration in the Referrer Store preventing access to the registry, or the absence of appropriate verifiers corresponding to the referenced image artifacts."
+    }
+  ]
+} component-type=server go.version=go1.23.3 namespace= trace-id=2b6ecca6-3fa5-4979-a856-b8a83b1ae62a
+time=2026-02-21T12:45:56.495497152Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T12:45:56.504873042Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=bba1cefe-ebc7-43ff-93d4-aa519bc5874e
+time=2026-02-21T12:49:04.601422445Z level=info msg=reconciling certificate store 'default/certstore-inline'
+time=2026-02-21T12:49:04.609707749Z level=info msg=1 certificates fetched for certificate store default/certstore-inline
+time=2026-02-21T13:02:36.505366257Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T13:02:36.505432708Z level=warning msg=Certificate Store already exists. Key management provider and certificate store should not be configured together. Please migrate to key management provider and delete certificate store.
+time=2026-02-21T13:02:36.515883665Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=e04d1e27-5d15-4330-87f9-d5272bddf4de
+time=2026-02-21T13:14:36.049759632Z level=warning msg=Digest should be used instead of tagged reference. The resolved digest may not point to the same signed artifact, since tags are mutable. component-type=server go.version=go1.23.3 namespace= trace-id=12b78a08-33b4-460d-b8d8-f3d7bc165841
+time=2026-02-21T13:14:36.049781085Z level=info msg=verifying subject ghcr.io/deislabs/ratify/notary-image:signed component-type=server go.version=go1.23.3 namespace= trace-id=12b78a08-33b4-460d-b8d8-f3d7bc165841
+time=2026-02-21T13:14:36.314322722Z level=info msg=Resolve of the image completed successfully the digest is sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b component-type=executor go.version=go1.23.3 namespace= trace-id=12b78a08-33b4-460d-b8d8-f3d7bc165841
+time=2026-02-21T13:14:37.114110762Z level=info msg=Trust policy configuration: &{Name:default RegistryScopes:[*] SignatureVerification:{VerificationLevel:strict Override:map[]} TrustStores:[ca:certs] TrustedIdentities:[*]} component-type=verifier go.version=go1.23.3 namespace= trace-id=12b78a08-33b4-460d-b8d8-f3d7bc165841
+time=2026-02-21T13:14:37.11442014Z level=warning msg=unable to fetch certificates for Key Management Provider certstore-inline: failed to access non-existent key management provider: certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=12b78a08-33b4-460d-b8d8-f3d7bc165841
+time=2026-02-21T13:14:37.114434057Z level=warning msg=no certificate fetched for Key Management Provider certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=12b78a08-33b4-460d-b8d8-f3d7bc165841
+time=2026-02-21T13:14:37.114446493Z level=warning msg=unable to fetch certificates for Certificate Store certstore-inline: failed to access non-existent certificate store: certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=12b78a08-33b4-460d-b8d8-f3d7bc165841
+time=2026-02-21T13:14:37.114468041Z level=warning msg=no certificate fetched for Certificate Store certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=12b78a08-33b4-460d-b8d8-f3d7bc165841
+time=2026-02-21T13:14:37.114479474Z level=error msg=authenticity validation failed. Failure reason: unable to fetch certificates for namedStore: certs component-type=verifier go.version=go1.23.3 namespace= trace-id=12b78a08-33b4-460d-b8d8-f3d7bc165841
+time=2026-02-21T13:14:37.11455434Z level=info msg=verify result for subject ghcr.io/deislabs/ratify/notary-image:signed: {
+  "verifierReports": [
+    {
+      "isSuccess": false,
+      "name": "verifier-notary-inline",
+      "type": "notation",
+      "message": "Original Error: (Original Error: (unable to fetch certificates for namedStore: certs), Error: verify plugin failure, Code: VERIFY_PLUGIN_FAILURE, Plugin Name: verifier-notary-inline, Component Type: verifier, Documentation: https://ratify.dev/docs/troubleshoot/verifier/notation, Detail: failed to verify signature of digest), Error: verify reference failure, Code: VERIFY_REFERENCE_FAILURE, Plugin Name: verifier-notary-inline, Component Type: verifier",
+      "artifactType": "application/vnd.cncf.notary.signature"
+    }
+  ]
+} component-type=server go.version=go1.23.3 namespace= trace-id=12b78a08-33b4-460d-b8d8-f3d7bc165841
+time=2026-02-21T13:15:17.445553945Z level=info msg=verifying subject ghcr.io/deislabs/ratify/notary-image@sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b component-type=server go.version=go1.23.3 namespace= trace-id=f52b48b1-36dd-4b7f-9cdc-8a9dbecd4b7d
+time=2026-02-21T13:15:17.684809379Z level=info msg=Resolve of the image completed successfully the digest is sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b component-type=executor go.version=go1.23.3 namespace= trace-id=f52b48b1-36dd-4b7f-9cdc-8a9dbecd4b7d
+time=2026-02-21T13:15:18.552645762Z level=info msg=Trust policy configuration: &{Name:default RegistryScopes:[*] SignatureVerification:{VerificationLevel:strict Override:map[]} TrustStores:[ca:certs] TrustedIdentities:[*]} component-type=verifier go.version=go1.23.3 namespace= trace-id=f52b48b1-36dd-4b7f-9cdc-8a9dbecd4b7d
+time=2026-02-21T13:15:18.552942893Z level=warning msg=unable to fetch certificates for Key Management Provider certstore-inline: failed to access non-existent key management provider: certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=f52b48b1-36dd-4b7f-9cdc-8a9dbecd4b7d
+time=2026-02-21T13:15:18.552963884Z level=warning msg=no certificate fetched for Key Management Provider certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=f52b48b1-36dd-4b7f-9cdc-8a9dbecd4b7d
+time=2026-02-21T13:15:18.552974303Z level=warning msg=unable to fetch certificates for Certificate Store certstore-inline: failed to access non-existent certificate store: certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=f52b48b1-36dd-4b7f-9cdc-8a9dbecd4b7d
+time=2026-02-21T13:15:18.552984781Z level=warning msg=no certificate fetched for Certificate Store certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=f52b48b1-36dd-4b7f-9cdc-8a9dbecd4b7d
+time=2026-02-21T13:15:18.552991106Z level=error msg=authenticity validation failed. Failure reason: unable to fetch certificates for namedStore: certs component-type=verifier go.version=go1.23.3 namespace= trace-id=f52b48b1-36dd-4b7f-9cdc-8a9dbecd4b7d
+time=2026-02-21T13:15:18.553060476Z level=info msg=verify result for subject ghcr.io/deislabs/ratify/notary-image@sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b: {
+  "verifierReports": [
+    {
+      "isSuccess": false,
+      "name": "verifier-notary-inline",
+      "type": "notation",
+      "message": "Original Error: (Original Error: (unable to fetch certificates for namedStore: certs), Error: verify plugin failure, Code: VERIFY_PLUGIN_FAILURE, Plugin Name: verifier-notary-inline, Component Type: verifier, Documentation: https://ratify.dev/docs/troubleshoot/verifier/notation, Detail: failed to verify signature of digest), Error: verify reference failure, Code: VERIFY_REFERENCE_FAILURE, Plugin Name: verifier-notary-inline, Component Type: verifier",
+      "artifactType": "application/vnd.cncf.notary.signature"
+    }
+  ]
+} component-type=server go.version=go1.23.3 namespace= trace-id=f52b48b1-36dd-4b7f-9cdc-8a9dbecd4b7d
+time=2026-02-21T13:18:29.338248585Z level=warning msg=Digest should be used instead of tagged reference. The resolved digest may not point to the same signed artifact, since tags are mutable. component-type=server go.version=go1.23.3 namespace= trace-id=acbceb71-7e45-46c8-b80f-b7228632acf7
+time=2026-02-21T13:18:29.338270544Z level=info msg=verifying subject ghcr.io/deislabs/ratify/notary-image:unsigned component-type=server go.version=go1.23.3 namespace= trace-id=acbceb71-7e45-46c8-b80f-b7228632acf7
+time=2026-02-21T13:18:29.613667692Z level=info msg=Resolve of the image completed successfully the digest is sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4 component-type=executor go.version=go1.23.3 namespace= trace-id=acbceb71-7e45-46c8-b80f-b7228632acf7
+time=2026-02-21T13:18:30.189181732Z level=info msg=verify result for subject ghcr.io/deislabs/ratify/notary-image:unsigned: {
+  "verifierReports": [
+    {
+      "subject": "ghcr.io/deislabs/ratify/notary-image:unsigned",
+      "isSuccess": false,
+      "message": "verification failed: Error: no verifier report, Code: NO_VERIFIER_REPORT, Component Type: executor, Description: No verifier report was generated. This might be due to various factors, such as lack of artifacts attached to the image, a misconfiguration in the Referrer Store preventing access to the registry, or the absence of appropriate verifiers corresponding to the referenced image artifacts."
+    }
+  ]
+} component-type=server go.version=go1.23.3 namespace= trace-id=acbceb71-7e45-46c8-b80f-b7228632acf7
+time=2026-02-21T13:19:16.5169636Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T13:19:16.517104249Z level=warning msg=Certificate Store already exists. Key management provider and certificate store should not be configured together. Please migrate to key management provider and delete certificate store.
+time=2026-02-21T13:19:16.526896338Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=18614646-8b29-455f-aa7e-46452c03bd9a
+time=2026-02-21T13:25:17.463569392Z level=info msg=verifying subject ghcr.io/deislabs/ratify/notary-image@sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b component-type=server go.version=go1.23.3 namespace= trace-id=55577e08-4f62-47fd-8d06-6524e2214430
+time=2026-02-21T13:25:17.71996461Z level=info msg=Resolve of the image completed successfully the digest is sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b component-type=executor go.version=go1.23.3 namespace= trace-id=55577e08-4f62-47fd-8d06-6524e2214430
+time=2026-02-21T13:25:18.504655899Z level=info msg=Trust policy configuration: &{Name:default RegistryScopes:[*] SignatureVerification:{VerificationLevel:strict Override:map[]} TrustStores:[ca:certs] TrustedIdentities:[*]} component-type=verifier go.version=go1.23.3 namespace= trace-id=55577e08-4f62-47fd-8d06-6524e2214430
+time=2026-02-21T13:25:18.504946457Z level=warning msg=unable to fetch certificates for Key Management Provider certstore-inline: failed to access non-existent key management provider: certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=55577e08-4f62-47fd-8d06-6524e2214430
+time=2026-02-21T13:25:18.504960663Z level=warning msg=no certificate fetched for Key Management Provider certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=55577e08-4f62-47fd-8d06-6524e2214430
+time=2026-02-21T13:25:18.504970736Z level=warning msg=unable to fetch certificates for Certificate Store certstore-inline: failed to access non-existent certificate store: certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=55577e08-4f62-47fd-8d06-6524e2214430
+time=2026-02-21T13:25:18.504976543Z level=warning msg=no certificate fetched for Certificate Store certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=55577e08-4f62-47fd-8d06-6524e2214430
+time=2026-02-21T13:25:18.504984993Z level=error msg=authenticity validation failed. Failure reason: unable to fetch certificates for namedStore: certs component-type=verifier go.version=go1.23.3 namespace= trace-id=55577e08-4f62-47fd-8d06-6524e2214430
+time=2026-02-21T13:25:18.505071578Z level=info msg=verify result for subject ghcr.io/deislabs/ratify/notary-image@sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b: {
+  "verifierReports": [
+    {
+      "isSuccess": false,
+      "name": "verifier-notary-inline",
+      "type": "notation",
+      "message": "Original Error: (Original Error: (unable to fetch certificates for namedStore: certs), Error: verify plugin failure, Code: VERIFY_PLUGIN_FAILURE, Plugin Name: verifier-notary-inline, Component Type: verifier, Documentation: https://ratify.dev/docs/troubleshoot/verifier/notation, Detail: failed to verify signature of digest), Error: verify reference failure, Code: VERIFY_REFERENCE_FAILURE, Plugin Name: verifier-notary-inline, Component Type: verifier",
+      "artifactType": "application/vnd.cncf.notary.signature"
+    }
+  ]
+} component-type=server go.version=go1.23.3 namespace= trace-id=55577e08-4f62-47fd-8d06-6524e2214430
+time=2026-02-21T13:25:18.521473634Z level=info msg=verifying subject ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4 component-type=server go.version=go1.23.3 namespace= trace-id=c91873f1-d6c2-4012-baaf-082d24c15b3e
+time=2026-02-21T13:25:18.755346546Z level=info msg=Resolve of the image completed successfully the digest is sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4 component-type=executor go.version=go1.23.3 namespace= trace-id=c91873f1-d6c2-4012-baaf-082d24c15b3e
+time=2026-02-21T13:25:19.062539997Z level=info msg=verify result for subject ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4: {
+  "verifierReports": [
+    {
+      "subject": "ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4",
+      "isSuccess": false,
+      "message": "verification failed: Error: no verifier report, Code: NO_VERIFIER_REPORT, Component Type: executor, Description: No verifier report was generated. This might be due to various factors, such as lack of artifacts attached to the image, a misconfiguration in the Referrer Store preventing access to the registry, or the absence of appropriate verifiers corresponding to the referenced image artifacts."
+    }
+  ]
+} component-type=server go.version=go1.23.3 namespace= trace-id=c91873f1-d6c2-4012-baaf-082d24c15b3e
+time=2026-02-21T13:35:17.457749899Z level=info msg=verifying subject ghcr.io/deislabs/ratify/notary-image@sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b component-type=server go.version=go1.23.3 namespace= trace-id=8b878428-0a02-4059-8a9e-071be91af8cb
+time=2026-02-21T13:35:17.742881145Z level=info msg=Resolve of the image completed successfully the digest is sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b component-type=executor go.version=go1.23.3 namespace= trace-id=8b878428-0a02-4059-8a9e-071be91af8cb
+time=2026-02-21T13:35:18.736059634Z level=info msg=Trust policy configuration: &{Name:default RegistryScopes:[*] SignatureVerification:{VerificationLevel:strict Override:map[]} TrustStores:[ca:certs] TrustedIdentities:[*]} component-type=verifier go.version=go1.23.3 namespace= trace-id=8b878428-0a02-4059-8a9e-071be91af8cb
+time=2026-02-21T13:35:18.73636367Z level=warning msg=unable to fetch certificates for Key Management Provider certstore-inline: failed to access non-existent key management provider: certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=8b878428-0a02-4059-8a9e-071be91af8cb
+time=2026-02-21T13:35:18.736376846Z level=warning msg=no certificate fetched for Key Management Provider certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=8b878428-0a02-4059-8a9e-071be91af8cb
+time=2026-02-21T13:35:18.7363895Z level=warning msg=unable to fetch certificates for Certificate Store certstore-inline: failed to access non-existent certificate store: certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=8b878428-0a02-4059-8a9e-071be91af8cb
+time=2026-02-21T13:35:18.736399496Z level=warning msg=no certificate fetched for Certificate Store certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=8b878428-0a02-4059-8a9e-071be91af8cb
+time=2026-02-21T13:35:18.736435236Z level=error msg=authenticity validation failed. Failure reason: unable to fetch certificates for namedStore: certs component-type=verifier go.version=go1.23.3 namespace= trace-id=8b878428-0a02-4059-8a9e-071be91af8cb
+time=2026-02-21T13:35:18.736523603Z level=info msg=verify result for subject ghcr.io/deislabs/ratify/notary-image@sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b: {
+  "verifierReports": [
+    {
+      "isSuccess": false,
+      "name": "verifier-notary-inline",
+      "type": "notation",
+      "message": "Original Error: (Original Error: (unable to fetch certificates for namedStore: certs), Error: verify plugin failure, Code: VERIFY_PLUGIN_FAILURE, Plugin Name: verifier-notary-inline, Component Type: verifier, Documentation: https://ratify.dev/docs/troubleshoot/verifier/notation, Detail: failed to verify signature of digest), Error: verify reference failure, Code: VERIFY_REFERENCE_FAILURE, Plugin Name: verifier-notary-inline, Component Type: verifier",
+      "artifactType": "application/vnd.cncf.notary.signature"
+    }
+  ]
+} component-type=server go.version=go1.23.3 namespace= trace-id=8b878428-0a02-4059-8a9e-071be91af8cb
+time=2026-02-21T13:35:18.751790704Z level=info msg=verifying subject ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4 component-type=server go.version=go1.23.3 namespace= trace-id=663eed1e-273d-47a5-95e1-15489219985c
+time=2026-02-21T13:35:18.985363486Z level=info msg=Resolve of the image completed successfully the digest is sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4 component-type=executor go.version=go1.23.3 namespace= trace-id=663eed1e-273d-47a5-95e1-15489219985c
+time=2026-02-21T13:35:19.427365338Z level=info msg=verify result for subject ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4: {
+  "verifierReports": [
+    {
+      "subject": "ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4",
+      "isSuccess": false,
+      "message": "verification failed: Error: no verifier report, Code: NO_VERIFIER_REPORT, Component Type: executor, Description: No verifier report was generated. This might be due to various factors, such as lack of artifacts attached to the image, a misconfiguration in the Referrer Store preventing access to the registry, or the absence of appropriate verifiers corresponding to the referenced image artifacts."
+    }
+  ]
+} component-type=server go.version=go1.23.3 namespace= trace-id=663eed1e-273d-47a5-95e1-15489219985c
+time=2026-02-21T13:35:56.52736222Z level=info msg=reconciling cluster key management provider 'certstore-inline'
+time=2026-02-21T13:35:56.527431828Z level=warning msg=Certificate Store already exists. Key management provider and certificate store should not be configured together. Please migrate to key management provider and delete certificate store.
+time=2026-02-21T13:35:56.536604801Z level=error msg=Reconciler error KeyManagementProvider=certstore-inline controller=keymanagementprovider controllerGroup=config.ratify.deislabs.io controllerKind=KeyManagementProvider error=failed to create key management provider provider: Error: config invalid, Code: CONFIG_INVALID, Component Type: keyManagementProvider, Detail: contentType parameter is not set name=certstore-inline namespace= reconcileID=8fc4c26b-0159-4fed-9ec8-aed4fa5a4d50
+time=2026-02-21T13:45:17.468350293Z level=info msg=verifying subject ghcr.io/deislabs/ratify/notary-image@sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b component-type=server go.version=go1.23.3 namespace= trace-id=b57f5bac-779d-44be-a181-44c4fc1cefbb
+time=2026-02-21T13:45:17.693273254Z level=info msg=Resolve of the image completed successfully the digest is sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b component-type=executor go.version=go1.23.3 namespace= trace-id=b57f5bac-779d-44be-a181-44c4fc1cefbb
+time=2026-02-21T13:45:18.491321295Z level=info msg=Trust policy configuration: &{Name:default RegistryScopes:[*] SignatureVerification:{VerificationLevel:strict Override:map[]} TrustStores:[ca:certs] TrustedIdentities:[*]} component-type=verifier go.version=go1.23.3 namespace= trace-id=b57f5bac-779d-44be-a181-44c4fc1cefbb
+time=2026-02-21T13:45:18.491630617Z level=warning msg=unable to fetch certificates for Key Management Provider certstore-inline: failed to access non-existent key management provider: certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=b57f5bac-779d-44be-a181-44c4fc1cefbb
+time=2026-02-21T13:45:18.491644234Z level=warning msg=no certificate fetched for Key Management Provider certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=b57f5bac-779d-44be-a181-44c4fc1cefbb
+time=2026-02-21T13:45:18.491654946Z level=warning msg=unable to fetch certificates for Certificate Store certstore-inline: failed to access non-existent certificate store: certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=b57f5bac-779d-44be-a181-44c4fc1cefbb
+time=2026-02-21T13:45:18.491660585Z level=warning msg=no certificate fetched for Certificate Store certstore-inline component-type=verifier go.version=go1.23.3 namespace= trace-id=b57f5bac-779d-44be-a181-44c4fc1cefbb
+time=2026-02-21T13:45:18.491670892Z level=error msg=authenticity validation failed. Failure reason: unable to fetch certificates for namedStore: certs component-type=verifier go.version=go1.23.3 namespace= trace-id=b57f5bac-779d-44be-a181-44c4fc1cefbb
+time=2026-02-21T13:45:18.49176193Z level=info msg=verify result for subject ghcr.io/deislabs/ratify/notary-image@sha256:8e3d01113285a0e4aa574da8eb9c0f112a1eb979d72f73399d7175ba3cdb1c1b: {
+  "verifierReports": [
+    {
+      "isSuccess": false,
+      "name": "verifier-notary-inline",
+      "type": "notation",
+      "message": "Original Error: (Original Error: (unable to fetch certificates for namedStore: certs), Error: verify plugin failure, Code: VERIFY_PLUGIN_FAILURE, Plugin Name: verifier-notary-inline, Component Type: verifier, Documentation: https://ratify.dev/docs/troubleshoot/verifier/notation, Detail: failed to verify signature of digest), Error: verify reference failure, Code: VERIFY_REFERENCE_FAILURE, Plugin Name: verifier-notary-inline, Component Type: verifier",
+      "artifactType": "application/vnd.cncf.notary.signature"
+    }
+  ]
+} component-type=server go.version=go1.23.3 namespace= trace-id=b57f5bac-779d-44be-a181-44c4fc1cefbb
+time=2026-02-21T13:45:18.508218221Z level=info msg=verifying subject ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4 component-type=server go.version=go1.23.3 namespace= trace-id=c7fc06c9-f75d-4244-b883-9d4f668f2590
+time=2026-02-21T13:45:18.793947292Z level=info msg=Resolve of the image completed successfully the digest is sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4 component-type=executor go.version=go1.23.3 namespace= trace-id=c7fc06c9-f75d-4244-b883-9d4f668f2590
+time=2026-02-21T13:45:19.08136344Z level=info msg=verify result for subject ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4: {
+  "verifierReports": [
+    {
+      "subject": "ghcr.io/deislabs/ratify/notary-image@sha256:17490f904cf278d4314a1ccba407fc8fd00fb45303589b8cc7f5174ac35554f4",
+      "isSuccess": false,
+      "message": "verification failed: Error: no verifier report, Code: NO_VERIFIER_REPORT, Component Type: executor, Description: No verifier report was generated. This might be due to various factors, such as lack of artifacts attached to the image, a misconfiguration in the Referrer Store preventing access to the registry, or the absence of appropriate verifiers corresponding to the referenced image artifacts."
+    }
+  ]
+} component-type=server go.version=go1.23.3 namespace= trace-id=c7fc06c9-f75d-4244-b883-9d4f668f2590

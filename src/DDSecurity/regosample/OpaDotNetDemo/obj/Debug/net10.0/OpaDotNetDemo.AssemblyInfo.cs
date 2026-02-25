@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OpaDotNetDemo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4b031da259a78a31a263430064658e934df843da")]
 [assembly: System.Reflection.AssemblyProductAttribute("OpaDotNetDemo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OpaDotNetDemo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
