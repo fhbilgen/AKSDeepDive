@@ -1,0 +1,188 @@
+Security
+Module 1: Identity and Access
+Module 2: Cluster Hardening
+Module 3: Workload Hardening
+Module 4: Confidential Workloads
+Module 5: Vulnerability Management
+Module 6: Supply Chain Security
+Module 7: Threat Detection and Response
+Module 8: Compliance and Benchmarks
+
+
+
+
+
+AKS Security
+=====================
+Security overview
+Security baseline
+
+
+Module 1: Identity and access
+------------------------------
+
+Access and identity overview
+
+Manage access to the AKS resource
+- AKS service permissions reference
+- Control access to kubeconfig
+
+Cluster authentication
+- Cluster authentication concepts
+- Microsoft Entra ID authentication to cluster control plane
+- Authenticate with kubelogin
+- Conditional Access for cluster and node access
+- Privileged Identity Management for cluster and node access
+- Disable local cluster admin accounts
+- External identity provider authentication to cluster (overview)
+- Set up external identity provider authentication to cluster
+- Manage SSH access to nodes
+
+Cluster authorization
+- Cluster authorization concepts
+- Use Microsoft Entra ID authorization for the Kubernetes API
+- Use Kubernetes RBAC with Microsoft Entra Integration
+
+Cluster identity (managed identities and service principals)
+- Managed identities overview
+- Use a system-assigned managed identity
+- Use a user-assigned managed identity
+- Use a pre-created kubelet managed identity
+- Service principal as alucster identity
+- Rotate cluster credentials
+
+Workload identity (pod to Azure)
+- Workload identity overview
+- Create an OIDC issuer for your cluster
+- Deploy and configure workload identity for a cluster
+- Configure cross-tenant workload identity
+- Identity Bindings for scalable workload identity (overview)
+- Set up identity bindings for scalable workload identity
+- Migrate from pod identity to workload identity
+- Microsoft Entra pod identity (legacy)
+
+
+
+Module 2: Cluster Hardening
+------------------------------
+
+Cluster security best practices
+Control plane access
+- Define API server authorized IP ranges
+- Use service tags for API server authorized IP ranges
+- Trusted Access for Azure services
+
+Certificates
+- Manage cluster certificates and rotation
+- Custom certificate authorities on nodes
+
+Encryption at rest (KMS etcd)
+- KMS encryption at rest of K8s API resources (overview)
+- Configure KMS encryption at rest of K8s API resources
+- Update key vault mode for legacy KMS
+- Migrate to KMS v2 (legacy)
+- Migrate to KMS with platform-managed or customer-managed keys
+- KMS observability (legacy)
+- Use KMS etcd encryption (legacy)
+
+Node hardening
+- Encrypt Azure managed disks using customer-managed keys
+- Host-based encryption
+- FIPS-compliant node pools
+- Azure dedicated Hosts for AKS nodes
+- Restrict access to IMDS
+
+Policy and governance
+- Enforce compliance with Azure Policy 
+- Azure Policy for Kubernetes (concepts)
+- Enforce best practices with deployment safeguards
+- Security controls by Azure Policy
+
+
+Module 3: Workload hardening
+------------------------------
+
+Pod Security
+- Pod security best practices
+- Pod Security Admission
+- Pod security policies (legacy)
+- Container privilege hardening (Linux)
+
+Pod Sandboxing
+- Pod Sandboxing overview
+- Pod Sandboxing considerations
+- Deploy Pod Sandboxing
+
+Network Policies
+- Secure pod traffic with network policies
+- Network policy best practices
+- Use network policies in the Azure portal
+
+Secrets Management
+- Serve NGINX TLS certs from Key Vault
+- Configure the Azure Key Vault provider for Secrets Store CSI Driver
+- Provide access to Azure Key Vault from Secrets Store CSI Driver
+- Configure and troubleshoot the Azure Key Vault provider for Secrets Store CSI Driver
+
+Module 4: Confidential workloads
+------------------------------
+Confidential VM nodes
+Confidential containers
+- Confidential Containers (preview)
+- Deploy with default policy 
+- Confidential Containers security policy
+
+
+Module 5: Vulnerability management
+------------------------------
+Vulnerability management 
+- Vulnerability management overview
+- Subscribe to AKS security bulletins
+- Container image management best practices
+- Remove vulnerable images with Image Cleaner
+- Build and registry time scanning
+ * Scan images in your CI/CD workflow
+ * Scan container images for vulnerabilities
+- Cluster-side scanning and enforcement
+ * Scan AKS nodes for vulnerabilities
+ * Gate workload deployment on vulnerability metadata
+
+Module 6: Supply chain security
+------------------------------
+Verify signed container images at deploy time
+
+Module 7: Threat detection and response
+------------------------------
+Container threat protection overview 
+Runtime alerts for Kubernetes clusters
+Detect binary drift in running containers
+
+Module 8: Compliance and benchmarks
+------------------------------
+Center for Internet Security (CIS) benchmarks
+- CIS Baseline overview
+- CIS Kubernetes benchmark
+- CIS Azure Linux 2.0 benchmark
+- CIS Azure Linux 3.0 benchmark
+- CIS Windows Server benchmark
+
+Payment Card Industry Data Security Standard (PCI DSS)
+- PCI DSS compliance overview
+- Introduction to PCI DSS v4.0.1 on AKS
+- Risk assessment and code assets
+- Network security
+- Data protection 
+- Cryptography and key management
+- Identify and access management
+- Enhanced MFA implementation
+- Malware protection
+- Monitoring and logging
+- Continuous security monitoring
+- Security policies
+- Targeted risk analysis
+- Security awareness training
+- Anti-phishing and social engineering
+- Third-party and supply chain security
+- Customized approach guidance
+- Requirement mapping matrix
+- Summary

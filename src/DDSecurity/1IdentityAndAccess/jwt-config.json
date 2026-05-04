@@ -1,0 +1,29 @@
+{
+  "issuer": {
+      "url": "https://token.actions.githubusercontent.com",
+      "audiences": [
+          "my-api"
+      ]
+  },
+  "claimValidationRules": [
+      {
+          "expression": "has(claims.sub)",
+          "message": "must have sub claim"
+      }
+  ],
+  "claimMappings": {
+      "username": {
+          "expression": "'aks:jwt:github:' + claims.sub"
+      }
+  },
+  "userValidationRules": [
+      {
+          "expression": "has(user.username)",
+          "message": "must have username"
+      },
+      {
+          "expression": "!user.username.startsWith('aks:jwt:github:system')",
+          "message": "username must not start with 'aks:jwt:github:system'"
+      }
+  ]
+}
