@@ -10,24 +10,29 @@ Module 8: Compliance and Benchmarks
 
 
 
+Module 1: Identity and access 		12/29
+Module 2: Cluster Hardening 		0/22
+Module 3: Workload hardening 		0/14
+Module 4: Confidential workloads 	0/4
+Module 5: Vulnerability management 	0/8
+Module 6: Supply chain security 	0/1
+Module 7: Threat detection and response 0/3
+Module 8: Compliance and benchmarks 	0/24
+
+I  - 12/81
+II - 12/105
 
 
-AKS Security
-=====================
-Security overview
-Security baseline
-
-
-Module 1: Identity and access
+Module 1: Identity and access 12/29
 ------------------------------
 
-Access and identity overview
+Access and identity overview 1
 
-Manage access to the AKS resource
+DONE Manage access to the AKS resource 2
 - AKS service permissions reference
 - Control access to kubeconfig
 
-Cluster authentication
+DONE Cluster authentication 9
 - Cluster authentication concepts
 - Microsoft Entra ID authentication to cluster control plane
 - Authenticate with kubelogin
@@ -38,12 +43,12 @@ Cluster authentication
 - Set up external identity provider authentication to cluster
 - Manage SSH access to nodes
 
-Cluster authorization
+Cluster authorization 3
 - Cluster authorization concepts
 - Use Microsoft Entra ID authorization for the Kubernetes API
 - Use Kubernetes RBAC with Microsoft Entra Integration
 
-Cluster identity (managed identities and service principals)
+Cluster identity 6
 - Managed identities overview
 - Use a system-assigned managed identity
 - Use a user-assigned managed identity
@@ -51,7 +56,7 @@ Cluster identity (managed identities and service principals)
 - Service principal as alucster identity
 - Rotate cluster credentials
 
-Workload identity (pod to Azure)
+Workload identity 8
 - Workload identity overview
 - Create an OIDC issuer for your cluster
 - Deploy and configure workload identity for a cluster
@@ -63,20 +68,21 @@ Workload identity (pod to Azure)
 
 
 
-Module 2: Cluster Hardening
+Module 2: Cluster Hardening 0/22
 ------------------------------
 
-Cluster security best practices
-Control plane access
+Cluster security best practices 1
+
+Control plane access 3
 - Define API server authorized IP ranges
 - Use service tags for API server authorized IP ranges
 - Trusted Access for Azure services
 
-Certificates
+Certificates 2
 - Manage cluster certificates and rotation
 - Custom certificate authorities on nodes
 
-Encryption at rest (KMS etcd)
+Encryption at rest (KMS etcd) 7
 - KMS encryption at rest of K8s API resources (overview)
 - Configure KMS encryption at rest of K8s API resources
 - Update key vault mode for legacy KMS
@@ -85,46 +91,46 @@ Encryption at rest (KMS etcd)
 - KMS observability (legacy)
 - Use KMS etcd encryption (legacy)
 
-Node hardening
+Node hardening 5
 - Encrypt Azure managed disks using customer-managed keys
 - Host-based encryption
 - FIPS-compliant node pools
 - Azure dedicated Hosts for AKS nodes
 - Restrict access to IMDS
 
-Policy and governance
+Policy and governance 4
 - Enforce compliance with Azure Policy 
 - Azure Policy for Kubernetes (concepts)
 - Enforce best practices with deployment safeguards
 - Security controls by Azure Policy
 
 
-Module 3: Workload hardening
+Module 3: Workload hardening 0/14
 ------------------------------
 
-Pod Security
+Pod Security 4
 - Pod security best practices
 - Pod Security Admission
 - Pod security policies (legacy)
 - Container privilege hardening (Linux)
 
-Pod Sandboxing
+Pod Sandboxing 3
 - Pod Sandboxing overview
 - Pod Sandboxing considerations
 - Deploy Pod Sandboxing
 
-Network Policies
+Network Policies 3
 - Secure pod traffic with network policies
 - Network policy best practices
 - Use network policies in the Azure portal
 
-Secrets Management
+Secrets Management 4
 - Serve NGINX TLS certs from Key Vault
 - Configure the Azure Key Vault provider for Secrets Store CSI Driver
 - Provide access to Azure Key Vault from Secrets Store CSI Driver
 - Configure and troubleshoot the Azure Key Vault provider for Secrets Store CSI Driver
 
-Module 4: Confidential workloads
+Module 4: Confidential workloads 0/4
 ------------------------------
 Confidential VM nodes
 Confidential containers
@@ -133,7 +139,7 @@ Confidential containers
 - Confidential Containers security policy
 
 
-Module 5: Vulnerability management
+Module 5: Vulnerability management 0/8
 ------------------------------
 Vulnerability management 
 - Vulnerability management overview
@@ -147,26 +153,26 @@ Vulnerability management
  * Scan AKS nodes for vulnerabilities
  * Gate workload deployment on vulnerability metadata
 
-Module 6: Supply chain security
+Module 6: Supply chain security 0/1
 ------------------------------
 Verify signed container images at deploy time
 
-Module 7: Threat detection and response
+Module 7: Threat detection and response 0/3
 ------------------------------
 Container threat protection overview 
 Runtime alerts for Kubernetes clusters
 Detect binary drift in running containers
 
-Module 8: Compliance and benchmarks
+Module 8: Compliance and benchmarks 0/24
 ------------------------------
-Center for Internet Security (CIS) benchmarks
+Center for Internet Security (CIS) benchmarks  0/5
 - CIS Baseline overview
 - CIS Kubernetes benchmark
 - CIS Azure Linux 2.0 benchmark
 - CIS Azure Linux 3.0 benchmark
 - CIS Windows Server benchmark
 
-Payment Card Industry Data Security Standard (PCI DSS)
+Payment Card Industry Data Security Standard (PCI DSS) 0/19
 - PCI DSS compliance overview
 - Introduction to PCI DSS v4.0.1 on AKS
 - Risk assessment and code assets
@@ -186,3 +192,41 @@ Payment Card Industry Data Security Standard (PCI DSS)
 - Customized approach guidance
 - Requirement mapping matrix
 - Summary
+
+
+
+
+
+Workload identity lets pods running in your AKS cluster authenticate to Microsoft Entra–protected Azure services (such as Key Vault, Storage, or Cosmos DB) without storing secrets in the cluster. AKS uses Microsoft Entra Workload ID, which projects a Kubernetes service account token federated to a Microsoft Entra application or user-assigned managed identity.
+
+dev1@MngEnvMCAP442322.onmicrosoft.com
+Fopa181509
+
+
+az login
+
+az ad user create \
+  --display-name "Deve Loper1" \
+  --user-principal-name developer1@MngEnvMCAP442322.onmicrosoft.com \
+  --password "Fopa181509"
+New Password: Fopa091815
+
+Account should be assigned to a subscription
+
+az role assignment create --assignee "developer1@MngEnvMCAP442322.onmicrosoft.com" --role "Contributor" --scope "/subscriptions/0b84cfe4-f9d9-4e33-84f5-5feec95b370e"
+
+UPN: developer1@MngEnvMCAP442322.onmicrosoft.com
+ObjectID: 2b5fac04-c00b-4e23-9b0c-4b9de72f2460
+
+developer1@MngEnvMCAP442322.onmicrosoft.com
+Fopa091815
+
+faikb@MngEnvMCAP442322.onmicrosoft.com
+!35izmiR,
+
+admin@MngEnvMCAP442322.onmicrosoft.com
+!72izmiR,
+
+
+Azure Kubernetes Service Cluster Admin Role
+Azure Kubernetes Service Cluster User Role

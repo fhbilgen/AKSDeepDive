@@ -1,4 +1,5 @@
-# There is a 
+# There is a repo in Github for the authenticator part
+# https://github.com/fhbilgen/GithubOIDCProviderforAKS
 
 # On a terminal with an admin account logged check the status of the SSH service of the AKS cluster
 
